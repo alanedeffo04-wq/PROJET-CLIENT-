@@ -1,0 +1,432 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "title": "Fondations & Structures porteuses",
+      "subtitle": "Comment le vivant tient debout",
+      "pairs": [
+        {
+          "id": "r1-p1",
+          "bio": {
+            "name": "Nid de tisserin",
+            "label": "Biologie",
+            "image": "img/bio/nid-tisserin.jpg",
+            "caption": "Tressage végétal entrelacé"
+          },
+          "archi": {
+            "name": "Coque tressée",
+            "label": "Architecture",
+            "image": "img/archi/coque-tressee.jpg",
+            "caption": "Toiture en vannerie structurelle"
+          },
+          "hint": "Pense à l'entrelacement de fibres souples qui se renforcent mutuellement.",
+          "explanation": {
+            "title": "L'ingénierie du nid",
+            "text": "Le tisserin entrelace des brins d'herbe pour créer une structure suspendue d'une légèreté et d'une résistance remarquables. Cette logique inspire aujourd'hui des toitures en vannerie où des lattes de bois ou de bambou tressées portent leur propre charge sans armature lourde, répartissant les efforts comme un nid grandeur nature."
+          }
+        },
+        {
+          "id": "r1-p2",
+          "bio": {
+            "name": "Os spongieux",
+            "label": "Biologie",
+            "image": "img/bio/os-spongieux.jpg",
+            "caption": "Maille osseuse alvéolée"
+          },
+          "archi": {
+            "name": "Poutre alvéolaire",
+            "label": "Architecture",
+            "image": "img/archi/poutre-alveolaire.jpg",
+            "caption": "Acier ajouré haute performance"
+          },
+          "hint": "Une matière allégée par des vides organisés selon les lignes de force.",
+          "explanation": {
+            "title": "La logique de l'os trabéculaire",
+            "text": "À l'intérieur des os longs, la matière s'organise en travées qui suivent précisément les lignes de contrainte mécanique. Les ingénieurs reproduisent ce principe dans les poutres alvéolaires : on retire la matière là où elle ne travaille pas, ce qui réduit le poids de 30 % à 50 % sans perte de portance."
+          }
+        },
+        {
+          "id": "r1-p3",
+          "bio": {
+            "name": "Coquille d'œuf",
+            "label": "Biologie",
+            "image": "img/bio/coquille-oeuf.jpg",
+            "caption": "Voile minéral à double courbure"
+          },
+          "archi": {
+            "name": "Toit en coque mince",
+            "label": "Architecture",
+            "image": "img/archi/coque-mince.jpg",
+            "caption": "Voile de béton à grande portée"
+          },
+          "hint": "Une surface fine qui doit sa résistance à sa forme courbe, pas à son épaisseur.",
+          "explanation": {
+            "title": "La force de la double courbure",
+            "text": "Une coquille d'œuf supporte sans broncher la pression d'une main qui la serre dans la paume : sa double courbure répartit la charge sur toute la surface. Les architectes comme Félix Candela ou Heinz Isler ont traduit ce principe dans des voiles de béton de quelques centimètres d'épaisseur qui couvrent des dizaines de mètres."
+          }
+        },
+        {
+          "id": "r1-p4",
+          "bio": {
+            "name": "Tige de bambou",
+            "label": "Biologie",
+            "image": "img/bio/bambou.jpg",
+            "caption": "Tube creux à nœuds régulièrement espacés"
+          },
+          "archi": {
+            "name": "Mât tubulaire creux",
+            "label": "Architecture",
+            "image": "img/archi/mat-tubulaire.jpg",
+            "caption": "Structure verticale haute"
+          },
+          "hint": "Un cylindre creux est plus rigide qu'une barre pleine de même poids — où voit-on ça dans la nature ?",
+          "explanation": {
+            "title": "Le génie du tube creux",
+            "text": "Le bambou pousse en tube cloisonné par des nœuds : c'est la géométrie la plus efficace pour résister à la flexion avec un minimum de matière. Les ingénieurs reprennent ce principe dans les structures tubulaires creuses qui équipent gratte-ciels, éoliennes et pylônes, où chaque diaphragme interne joue le rôle d'un nœud de bambou."
+          }
+        },
+        {
+          "id": "r1-p5",
+          "bio": {
+            "name": "Racines d'arbre",
+            "label": "Biologie",
+            "image": "img/bio/racines.jpg",
+            "caption": "Ramification ancrée en profondeur"
+          },
+          "archi": {
+            "name": "Fondations ramifiées",
+            "label": "Architecture",
+            "image": "img/archi/fondations-ramifiees.jpg",
+            "caption": "Pieux à branches multiples"
+          },
+          "hint": "Pour tenir debout, certaines structures plongent et se divisent dans le sol.",
+          "explanation": {
+            "title": "Ancrage par division",
+            "text": "Un arbre résiste au vent grâce à un réseau racinaire qui se ramifie pour multiplier les points d'ancrage. Les fondations ramifiées (root piles) appliquent cette stratégie : un pieu central se divise en branches inclinées qui répartissent les charges dans un volume de sol bien plus large qu'un pieu droit."
+          }
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "title": "Enveloppes & Peaux",
+      "subtitle": "Quand la façade devient peau",
+      "pairs": [
+        {
+          "id": "r2-p1",
+          "bio": {
+            "name": "Peau de requin",
+            "label": "Biologie",
+            "image": "img/bio/peau-requin.jpg",
+            "caption": "Denticules microscopiques alignés"
+          },
+          "archi": {
+            "name": "Façade hydrodynamique",
+            "label": "Architecture",
+            "image": "img/archi/facade-hydrodynamique.jpg",
+            "caption": "Revêtement micro-structuré"
+          },
+          "hint": "Une surface qui paraît lisse mais ne l'est pas — et qui glisse mieux pour cette raison.",
+          "explanation": {
+            "title": "Le secret des denticules",
+            "text": "La peau du requin est couverte de minuscules écailles dentées qui canalisent les filets d'eau et réduisent la traînée de près de 10 %. Cette texture inspire des revêtements de façade qui réduisent les turbulences du vent et l'encrassement, et des films appliqués sur les avions et les coques de bateaux."
+          }
+        },
+        {
+          "id": "r2-p2",
+          "bio": {
+            "name": "Feuille de lotus",
+            "label": "Biologie",
+            "image": "img/bio/lotus.jpg",
+            "caption": "Surface superhydrophobe"
+          },
+          "archi": {
+            "name": "Revêtement autonettoyant",
+            "label": "Architecture",
+            "image": "img/archi/revetement-autonettoyant.jpg",
+            "caption": "Peinture nanostructurée"
+          },
+          "hint": "Une matière sur laquelle l'eau ne se pose jamais vraiment — et emporte la poussière en partant.",
+          "explanation": {
+            "title": "L'effet lotus",
+            "text": "À l'échelle microscopique, la feuille de lotus est hérissée de bosses cireuses qui empêchent l'eau d'adhérer : chaque goutte roule et embarque les saletés. Les peintures et enduits inspirés de cet effet permettent à des façades de rester propres sous la simple action de la pluie, réduisant l'entretien et l'usage de détergents."
+          }
+        },
+        {
+          "id": "r2-p3",
+          "bio": {
+            "name": "Carapace de tortue",
+            "label": "Biologie",
+            "image": "img/bio/carapace.jpg",
+            "caption": "Plaques superposées et imbriquées"
+          },
+          "archi": {
+            "name": "Toiture en écailles",
+            "label": "Architecture",
+            "image": "img/archi/toiture-ecailles.jpg",
+            "caption": "Tuiles modulaires superposées"
+          },
+          "hint": "Des éléments rigides qui se chevauchent pour former un bouclier continu et flexible.",
+          "explanation": {
+            "title": "La protection par superposition",
+            "text": "La carapace de la tortue combine rigidité globale et tolérance locale grâce à des écailles qui se chevauchent. Les toitures et façades en écailles métalliques ou céramiques reprennent ce principe : chaque élément reste petit, démontable et léger, mais l'assemblage forme une enveloppe étanche et résistante aux chocs."
+          }
+        },
+        {
+          "id": "r2-p4",
+          "bio": {
+            "name": "Pomme de pin",
+            "label": "Biologie",
+            "image": "img/bio/pomme-pin.jpg",
+            "caption": "Écailles qui réagissent à l'humidité"
+          },
+          "archi": {
+            "name": "Façade hygromorphe",
+            "label": "Architecture",
+            "image": "img/archi/facade-hygromorphe.jpg",
+            "caption": "Panneaux à ouverture automatique"
+          },
+          "hint": "Un mécanisme qui s'ouvre ou se ferme tout seul, sans moteur, en réponse à l'air.",
+          "explanation": {
+            "title": "Le mouvement sans énergie",
+            "text": "La pomme de pin ouvre et ferme ses écailles selon l'humidité de l'air, grâce à deux couches de fibres qui se dilatent différemment. Des architectes comme Achim Menges exploitent ce principe pour créer des panneaux de façade qui s'ouvrent quand l'air est sec et se ferment sous la pluie, sans capteur ni moteur — uniquement par la matière."
+          }
+        },
+        {
+          "id": "r2-p5",
+          "bio": {
+            "name": "Plumage d'oiseau",
+            "label": "Biologie",
+            "image": "img/bio/plumage.jpg",
+            "caption": "Couches de duvet et de plumes"
+          },
+          "archi": {
+            "name": "Isolation multicouche",
+            "label": "Architecture",
+            "image": "img/archi/isolation-multicouche.jpg",
+            "caption": "Paroi thermique stratifiée"
+          },
+          "hint": "Ce qui isole, ce n'est pas la matière, c'est l'air emprisonné entre plusieurs strates.",
+          "explanation": {
+            "title": "L'air comme isolant",
+            "text": "Le plumage d'un oiseau isole en piégeant de l'air immobile entre des plumes structurées en couches. Les parois multicouches reprennent cette logique : alterner matériaux denses et lames d'air ou matériaux à porosité contrôlée donne, à épaisseur égale, une performance thermique très supérieure à un mur homogène."
+          }
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "title": "Régulation & Flux",
+      "subtitle": "Faire circuler l'air, l'eau et les forces",
+      "pairs": [
+        {
+          "id": "r3-p1",
+          "bio": {
+            "name": "Termitière",
+            "label": "Biologie",
+            "image": "img/bio/termitiere.jpg",
+            "caption": "Cheminées de ventilation passive"
+          },
+          "archi": {
+            "name": "Bâtiment Eastgate",
+            "label": "Architecture",
+            "image": "img/archi/eastgate.jpg",
+            "caption": "Climatisation passive par tirage"
+          },
+          "hint": "Un édifice qui se rafraîchit tout seul grâce à des conduits verticaux et au soleil.",
+          "explanation": {
+            "title": "Le climat sans climatiseur",
+            "text": "Les termites construisent des cheminées qui créent un tirage thermique naturel : l'air chaud monte et aspire l'air frais des galeries profondes. L'Eastgate Centre à Harare, conçu par Mick Pearce, applique ce principe pour climatiser passivement 30 000 m² de bureaux en consommant 10 % de l'énergie d'un immeuble équivalent."
+          }
+        },
+        {
+          "id": "r3-p2",
+          "bio": {
+            "name": "Toile d'araignée",
+            "label": "Biologie",
+            "image": "img/bio/toile-araignee.jpg",
+            "caption": "Réseau de fils en tension"
+          },
+          "archi": {
+            "name": "Pont suspendu",
+            "label": "Architecture",
+            "image": "img/archi/pont-suspendu.jpg",
+            "caption": "Câbles porteurs en tension pure"
+          },
+          "hint": "Plutôt que de pousser, ces structures tirent — la matière travaille en traction.",
+          "explanation": {
+            "title": "La tension comme principe",
+            "text": "La toile d'araignée tient sur des fils en pure tension : aucune partie ne subit de compression, ce qui maximise l'efficacité du matériau. Les ponts suspendus et les structures en câbles (chapiteaux, stades, passerelles) appliquent cette logique : des câbles d'acier en traction pour franchir des portées que la maçonnerie ne pourrait pas atteindre."
+          }
+        },
+        {
+          "id": "r3-p3",
+          "bio": {
+            "name": "Alvéole d'abeille",
+            "label": "Biologie",
+            "image": "img/bio/alveole.jpg",
+            "caption": "Pavage hexagonal régulier"
+          },
+          "archi": {
+            "name": "Structure nid d'abeille",
+            "label": "Architecture",
+            "image": "img/archi/nid-abeille.jpg",
+            "caption": "Panneau composite alvéolé"
+          },
+          "hint": "La géométrie qui couvre une surface avec le moins de matière possible.",
+          "explanation": {
+            "title": "L'optimum hexagonal",
+            "text": "L'hexagone est la forme qui pave un plan avec le périmètre minimal — donc le moins de matière pour le plus de volume. Les panneaux dits « nid d'abeille » utilisent cette géométrie dans une âme en aluminium ou en carton entre deux peaux, atteignant des rapports résistance/poids exceptionnels utilisés en aéronautique et en architecture."
+          }
+        },
+        {
+          "id": "r3-p4",
+          "bio": {
+            "name": "Nervures de feuille",
+            "label": "Biologie",
+            "image": "img/bio/nervures.jpg",
+            "caption": "Réseau de distribution hiérarchisé"
+          },
+          "archi": {
+            "name": "Plan urbain dendritique",
+            "label": "Architecture",
+            "image": "img/archi/plan-dendritique.jpg",
+            "caption": "Voirie ramifiée et hiérarchisée"
+          },
+          "hint": "Comment irriguer un territoire avec le moins de chemin possible ? Regarde une feuille.",
+          "explanation": {
+            "title": "Distribuer sans gaspiller",
+            "text": "Les nervures d'une feuille distribuent eau et nutriments selon une hiérarchie : grosses nervures pour le débit, fines nervures pour la desserte fine. Les plans urbains et les réseaux de transport efficaces reprennent cette logique dendritique : des axes majeurs, puis secondaires, puis capillaires, pour minimiser la distance totale tout en desservant chaque point."
+          }
+        },
+        {
+          "id": "r3-p5",
+          "bio": {
+            "name": "Nageoire de baleine",
+            "label": "Biologie",
+            "image": "img/bio/nageoire-baleine.jpg",
+            "caption": "Bord d'attaque en tubercules"
+          },
+          "archi": {
+            "name": "Pale d'éolienne tuberculée",
+            "label": "Architecture",
+            "image": "img/archi/pale-eolienne.jpg",
+            "caption": "Profil aérodynamique optimisé"
+          },
+          "hint": "Un bord d'attaque ondulé glisse mieux dans le fluide qu'un bord parfaitement lisse.",
+          "explanation": {
+            "title": "Les tubercules de la baleine",
+            "text": "La baleine à bosse a des tubercules ondulés sur le bord d'attaque de ses nageoires, ce qui lui permet de manœuvrer à très bas angle d'attaque sans décrocher. Cette découverte (effet tubercule) inspire des pales d'éoliennes et de turbines à bord d'attaque ondulé, qui captent jusqu'à 20 % d'énergie en plus dans les vents faibles."
+          }
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "title": "Matière vivante & Intelligence adaptative",
+      "subtitle": "Quand le bâtiment devient organisme",
+      "pairs": [
+        {
+          "id": "r4-p1",
+          "bio": {
+            "name": "Mycélium",
+            "label": "Biologie",
+            "image": "img/bio/mycelium.jpg",
+            "caption": "Réseau filamenteux fongique"
+          },
+          "archi": {
+            "name": "Brique biosourcée",
+            "label": "Architecture",
+            "image": "img/archi/brique-mycelium.jpg",
+            "caption": "Matériau cultivé en moule"
+          },
+          "hint": "Un matériau qui ne se fabrique pas — il se cultive comme un champignon.",
+          "explanation": {
+            "title": "Faire pousser ses murs",
+            "text": "Le mycélium, partie souterraine des champignons, peut être cultivé sur des déchets agricoles dans des moules : en quelques jours, il forme un matériau rigide, isolant et entièrement biodégradable. Des projets comme la Hy-Fi Tower de David Benjamin (MoMA PS1, 2014) démontrent qu'on peut littéralement faire pousser des briques pour bâtir."
+          }
+        },
+        {
+          "id": "r4-p2",
+          "bio": {
+            "name": "Corail",
+            "label": "Biologie",
+            "image": "img/bio/corail.jpg",
+            "caption": "Squelette calcaire poreux"
+          },
+          "archi": {
+            "name": "Béton bio-mimétique",
+            "label": "Architecture",
+            "image": "img/archi/beton-poreux.jpg",
+            "caption": "Liant minéral à porosité contrôlée"
+          },
+          "hint": "Une matière dure construite à partir de ce qui flotte autour — y compris du CO₂.",
+          "explanation": {
+            "title": "Construire avec le carbone",
+            "text": "Le corail capte le CO₂ dissous dans l'eau de mer pour construire son squelette calcaire. Des bétons bio-mimétiques (comme ceux développés par Biomason ou CarbonCure) reproduisent ce processus : ils séquestrent durablement le CO₂ dans leur masse au lieu de l'émettre, transformant le matériau le plus polluant de la construction en puits de carbone."
+          }
+        },
+        {
+          "id": "r4-p3",
+          "bio": {
+            "name": "Cactus saguaro",
+            "label": "Biologie",
+            "image": "img/bio/saguaro.jpg",
+            "caption": "Tige cannelée verticalement"
+          },
+          "archi": {
+            "name": "Façade cannelée",
+            "label": "Architecture",
+            "image": "img/archi/facade-cannelee.jpg",
+            "caption": "Auto-ombrage par relief vertical"
+          },
+          "hint": "Un relief vertical qui projette son ombre sur lui-même pour rester frais.",
+          "explanation": {
+            "title": "S'ombrer soi-même",
+            "text": "Le saguaro survit au désert grâce à ses cannelures verticales qui, à toute heure du jour, projettent une partie de l'ombre sur la tige elle-même tout en augmentant la surface d'échange thermique. Des tours comme l'Al Bahr (Abu Dhabi) reprennent ce principe : un relief vertical de façade réduit le gain solaire de 30 % à 50 % par rapport à une paroi lisse."
+          }
+        },
+        {
+          "id": "r4-p4",
+          "bio": {
+            "name": "Bardane",
+            "label": "Biologie",
+            "image": "img/bio/bardane.jpg",
+            "caption": "Crochets végétaux accrocheurs"
+          },
+          "archi": {
+            "name": "Fixation velcro",
+            "label": "Architecture",
+            "image": "img/archi/fixation-velcro.jpg",
+            "caption": "Assemblage réversible sans visserie"
+          },
+          "hint": "Une fixation sans clou ni colle, qui se sépare et se rattache à volonté.",
+          "explanation": {
+            "title": "L'assemblage réversible",
+            "text": "George de Mestral a inventé le velcro en observant les crochets de la bardane qui s'accrochaient à son chien. Appliqué à l'architecture, ce principe d'assemblage mécanique réversible permet des bâtiments démontables et recyclables : on assemble sans colle, sans soudure, et on désassemble pour réemployer chaque composant."
+          }
+        },
+        {
+          "id": "r4-p5",
+          "bio": {
+            "name": "Tournesol",
+            "label": "Biologie",
+            "image": "img/bio/tournesol.jpg",
+            "caption": "Héliotropisme actif"
+          },
+          "archi": {
+            "name": "Panneau héliotrope",
+            "label": "Architecture",
+            "image": "img/archi/panneau-heliotrope.jpg",
+            "caption": "Photovoltaïque suiveur"
+          },
+          "hint": "Capter mieux la lumière en suivant le soleil pendant la journée.",
+          "explanation": {
+            "title": "Suivre la lumière",
+            "text": "Le tournesol oriente son capitule vers le soleil pour maximiser sa photosynthèse. Les panneaux photovoltaïques héliotropes (trackers) reprennent ce comportement : montés sur axe orientable, ils suivent la course du soleil et augmentent la production électrique de 25 % à 40 % par rapport à des panneaux fixes — un bâtiment qui se tourne vers la lumière."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,80 +1,258 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STK Architecture – Jeu de Mémoire Biomimétique</title>
-<link rel="stylesheet" href="stk-style.css">
-<style>
-  body { display: flex; flex-direction: column; }
-  #screen-home { display: flex; flex-direction: column; min-height: 100vh; align-items: center; justify-content: center; padding: 48px 24px; position: relative; background: radial-gradient(ellipse at 20% 80%, rgba(139,96,68,.14) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(122,150,104,.08) 0%, transparent 50%), #1E1208; }
-  .home-content { position: relative; z-index: 1; max-width: 760px; width: 100%; text-align: center; }
-  .home-content h1 { font-family: var(--font-title); font-size: clamp(2.4rem,5vw,3.8rem); font-weight: 600; color: var(--cream); line-height: 1.1; margin-bottom: 8px; }
-  .home-content h1 em { color: var(--vert-mousse); font-style: italic; }
-  .home-sub { font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--vert-mousse); margin-bottom: 40px; }
-  .rounds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin-bottom: 34px; text-align: left; }
-  .round-card { background: rgba(200,184,154,.05); border: 1px solid rgba(200,184,154,.13); border-radius: 10px; padding: 17px 19px; cursor: pointer; transition: all .3s ease; text-decoration: none; display: block; }
-  .round-card:hover { background: rgba(122,150,104,.1); border-color: rgba(122,150,104,.38); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,.3); }
-  .rc-num { font-family: var(--font-title); font-size: 2.8rem; color: var(--vert-mousse); line-height: 1; }
-  .rc-title { font-size: .62rem; letter-spacing: .17em; text-transform: uppercase; color: var(--sable); margin: 4px 0 7px; }
-  .rc-sub { font-size: .76rem; color: var(--gris-pierre); line-height: 1.5; }
-  .home-actions { display: flex; gap: 11px; justify-content: center; flex-wrap: wrap; }
-  @media(max-width:640px){ .rounds-grid{ grid-template-columns:1fr; } }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="STK Architecture — Biomimétisme Architectural : Le Jeu. Un jeu d'association pédagogique entre formes vivantes et structures bâties." />
+  <title>STK Architecture — Biomimétisme : Le Jeu</title>
+
+  <!-- Typographies : Cormorant Garamond (serif italique pour titres) + Manrope (sans-serif corps) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="screen-home">
-  <div class="game-header" style="position:fixed;top:0;left:0;right:0;">
-    <div class="stk-logo">STK<span class="logo-sub">Architecture</span></div>
-    <div class="logo-divider"></div>
-    <div class="header-center">
-      <div class="header-main-title">JEU DE MÉMOIRE BIOMIMÉTIQUE : L'ARCHITECTURE RENCONTRE LE VIVANT</div>
-      <div class="header-sub-title">Visual Identity — Step 1</div>
+  <!-- ========== EN-TÊTE ========== -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="#" class="site-header__logo" aria-label="STK Architecture - Accueil">
+        <span class="logo-mark">STK</span>
+        <span class="logo-word">Architecture</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Navigation principale">
+        <a href="#">L'agence</a>
+        <a href="#">Engagements</a>
+        <a href="#">Projets</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a href="#" class="site-header__cta">Découvrir →</a>
     </div>
-    <div class="header-right">
-      <div class="palette-swatches">
-        <div class="swatch" style="background:#C8B89A" title="Sable STK"></div>
-        <div class="swatch" style="background:#7A9668" title="Vert Mousse"></div>
-        <div class="swatch" style="background:#9AA5A8" title="Gris Pierre"></div>
-        <div class="swatch" style="background:#8B6044" title="Terre d'Ombre"></div>
-        <div class="swatch" style="background:#2C3135" title="Anthracite Profond"></div>
+  </header>
+
+  <!-- ========== LANDING ========== -->
+  <main id="view-landing" class="view view--landing" aria-labelledby="landing-title">
+    <div class="landing">
+      <div class="landing__text">
+        <p class="landing__eyebrow">Jeu éducatif · STK Architecture</p>
+        <h1 id="landing-title" class="landing__title">
+          Biomimétisme<br />
+          Architectural <span class="landing__title-em">:</span><br />
+          <em>Le Jeu</em>
+        </h1>
+        <p class="landing__lede">
+          Concevoir juste, concevoir <em>responsable.</em>
+          Une expérience interactive pour explorer les principes
+          de l'architecture biomimétique. Découvrez comment les
+          systèmes naturels peuvent inspirer des solutions durables,
+          esthétiques et fonctionnelles pour nos habitats de demain.
+        </p>
+        <button type="button" class="btn btn--primary" id="btn-start">
+          Commencer l'expérience
+        </button>
       </div>
+
+      <aside class="landing__card" aria-labelledby="landing-card-title">
+        <span class="landing__card-mark">↳</span>
+        <h2 id="landing-card-title" class="landing__card-title">
+          Le biomimétisme, c'est quoi&nbsp;?
+        </h2>
+        <p>
+          S'inspirer du vivant pour inventer mieux. Observer comment
+          les plantes, les animaux, les insectes fabriquent leurs
+          formes, leurs matériaux et leurs structures — puis traduire
+          ces stratégies dans nos bâtiments. Pendant des milliards
+          d'années, la nature a optimisé ses solutions. Il suffit de
+          regarder, et d'apprendre.
+        </p>
+        <p class="landing__card-meta">
+          4 manches &nbsp;·&nbsp; 20 associations &nbsp;·&nbsp; ~10 minutes
+        </p>
+      </aside>
     </div>
+  </main>
+
+  <!-- ========== JEU ========== -->
+  <main id="view-game" class="view view--game" hidden aria-labelledby="game-title">
+
+    <div class="game">
+      <header class="game__header">
+        <div class="game__header-left">
+          <p class="game__phase" id="game-phase">Manche 1 / 4</p>
+          <h2 id="game-title" class="game__title">
+            <span id="game-round-title">Association Biologique</span>
+          </h2>
+          <p class="game__subtitle" id="game-round-subtitle"></p>
+        </div>
+        <div class="game__header-right">
+          <div class="game__progress" aria-live="polite">
+            <span class="game__progress-label">Paires trouvées</span>
+            <span class="game__progress-count">
+              <span id="game-found">0</span>
+              <span class="game__progress-sep">/</span>
+              <span id="game-total">5</span>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <section class="game__board" aria-label="Plateau de jeu">
+        <div class="board" id="board" role="grid" aria-label="Grille de cartes à associer">
+          <!-- Les cartes sont injectées par script.js -->
+        </div>
+      </section>
+
+      <footer class="game__footer">
+        <button type="button" class="btn btn--ghost btn--small" id="btn-quit">
+          Quitter la session
+        </button>
+        <p class="game__legend">
+          <span class="legend-dot legend-dot--bio"></span> Biologie
+          <span class="legend-sep">·</span>
+          <span class="legend-dot legend-dot--archi"></span> Architecture
+        </p>
+      </footer>
+    </div>
+  </main>
+
+  <!-- ========== TOAST INDICE ========== -->
+  <div
+    class="hint-toast"
+    id="hint-toast"
+    role="status"
+    aria-live="polite"
+    hidden
+  >
+    <span class="hint-toast__icon">✦</span>
+    <span class="hint-toast__text" id="hint-toast-text"></span>
   </div>
 
-  <div class="home-content" style="margin-top:62px;">
-    <p class="home-sub">L'architecture rencontre le vivant</p>
-    <h1>Jeu de Mémoire <em>Biomimétique</em></h1>
+  <!-- ========== MODALE : PAIRE TROUVÉE ========== -->
+  <div
+    class="modal"
+    id="modal-pair"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-pair-title"
+    hidden
+  >
+    <div class="modal__backdrop" data-close-modal="modal-pair"></div>
+    <article class="modal__panel modal__panel--pair">
+      <header class="modal__header">
+        <p class="modal__eyebrow">Association réussie</p>
+        <h3 class="modal__title" id="modal-pair-title">—</h3>
+      </header>
 
-    <div class="rounds-grid">
-      <a class="round-card" href="manche1.html">
-        <div class="rc-num">01</div>
-        <div class="rc-title">Manche 1</div>
-        <div class="rc-sub">Biomimétisme Classique — Martin-Pêcheur, Termitière, TGV Japonais, Eastgate Building</div>
-      </a>
-      <a class="round-card" href="manche2.html">
-        <div class="rc-num">02</div>
-        <div class="rc-title">Manche 2</div>
-        <div class="rc-sub">Écosystème Marin — Corail, Ciment CO₂, Baleine, Requin, Nautile</div>
-      </a>
-      <a class="round-card" href="manche3.html">
-        <div class="rc-num">03</div>
-        <div class="rc-title">Manche 3</div>
-        <div class="rc-sub">Maison Moderne & Habitat Durable — Nid d'Oiseau, Structure Tissée, Bambou</div>
-      </a>
-      <a class="round-card" href="manche4.html">
-        <div class="rc-num">04</div>
-        <div class="rc-title">Manche 4</div>
-        <div class="rc-sub">Ossature Technique — Os Humain, Structure d'Avion, Treillis Délégué</div>
-      </a>
-    </div>
+      <div class="modal__pair-visuals">
+        <figure class="modal__visual modal__visual--bio">
+          <div class="modal__visual-image" id="modal-pair-bio-image" aria-hidden="true"></div>
+          <figcaption>
+            <span class="modal__visual-label">Biologie</span>
+            <span class="modal__visual-name" id="modal-pair-bio-name">—</span>
+          </figcaption>
+        </figure>
+        <div class="modal__visual-link" aria-hidden="true">
+          <span>↔</span>
+        </div>
+        <figure class="modal__visual modal__visual--archi">
+          <div class="modal__visual-image" id="modal-pair-archi-image" aria-hidden="true"></div>
+          <figcaption>
+            <span class="modal__visual-label">Architecture</span>
+            <span class="modal__visual-name" id="modal-pair-archi-name">—</span>
+          </figcaption>
+        </figure>
+      </div>
 
-    <div class="home-actions">
-      <a href="manche1.html" class="btn-primary" style="text-decoration:none;">Commencer — Manche 1</a>
-    </div>
+      <p class="modal__body" id="modal-pair-text">—</p>
+
+      <footer class="modal__footer">
+        <button type="button" class="btn btn--primary" id="modal-pair-continue">
+          Continuer →
+        </button>
+      </footer>
+    </article>
   </div>
-</div>
 
+  <!-- ========== MODALE : FIN DE MANCHE ========== -->
+  <div
+    class="modal"
+    id="modal-round"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-round-title"
+    hidden
+  >
+    <div class="modal__backdrop"></div>
+    <article class="modal__panel modal__panel--round">
+      <p class="modal__eyebrow">Manche complétée</p>
+      <h3 class="modal__title" id="modal-round-title">—</h3>
+      <p class="modal__body" id="modal-round-text">
+        Cinq associations trouvées. Vous progressez dans la lecture
+        des stratégies du vivant.
+      </p>
+      <div class="modal__progress" aria-hidden="true">
+        <div class="modal__progress-bar">
+          <div class="modal__progress-fill" id="modal-round-fill"></div>
+        </div>
+        <span id="modal-round-percent">0%</span>
+      </div>
+      <footer class="modal__footer">
+        <button type="button" class="btn btn--primary" id="modal-round-continue">
+          Manche suivante →
+        </button>
+      </footer>
+    </article>
+  </div>
+
+  <!-- ========== MODALE : FIN DE JEU ========== -->
+  <div
+    class="modal"
+    id="modal-end"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-end-title"
+    hidden
+  >
+    <div class="modal__backdrop"></div>
+    <article class="modal__panel modal__panel--end">
+      <p class="modal__eyebrow">Session complète</p>
+      <h3 class="modal__title" id="modal-end-title">
+        <em>Masterful Connections</em>
+      </h3>
+      <p class="modal__body">
+        Vingt liens biomimétiques décryptés. Vous avez exploré
+        comment la nature innove depuis des milliards d'années.
+        Chez STK, nous intégrons cette sagesse millénaire pour
+        concevoir des espaces justes, résilients et profondément
+        liés à leur territoire.
+      </p>
+      <footer class="modal__footer modal__footer--split">
+        <button type="button" class="btn btn--ghost" id="modal-end-restart">
+          Rejouer
+        </button>
+        <button type="button" class="btn btn--primary" id="modal-end-close">
+          Revenir à l'accueil
+        </button>
+      </footer>
+    </article>
+  </div>
+
+  <!-- ========== PIED DE PAGE ========== -->
+  <footer class="site-footer">
+    <p class="site-footer__brand">STK Architecture</p>
+    <p class="site-footer__copy">© 2026 STK Architecture — Biomimétisme Éducatif</p>
+    <nav class="site-footer__nav" aria-label="Liens secondaires">
+      <a href="#">Legal</a>
+      <a href="#">Privacy</a>
+      <a href="#">Methodology</a>
+    </nav>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
