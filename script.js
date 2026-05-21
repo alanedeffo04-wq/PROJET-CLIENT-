@@ -11,13 +11,21 @@
   // -----------------------------------------------------------
   const CONFIG = {
     dataPath: 'data.json',
-    storageKey: 'stk-biomim-state-v1',
+    storageKey: 'stk-biomim-state-v2',
     slotsPerRound: 12,            // grille 4x3
     pairsPerRound: 5,             // 5 paires = 10 cartes + 2 vides
-    hintDuration: 4500,           // ms pendant lesquelles l'indice reste visible
+    hintDuration: 6000,           // 6s d'affichage de l'indice (5-7s)
     cardRevealStagger: 40,        // ms entre l'apparition de chaque carte
     correctAnimDuration: 650,     // ms — temps avant d'ouvrir la modale
     wrongResetDuration: 900       // ms avant de désélectionner après erreur
+  };
+
+  // Mapping des manches aux saisons
+  const SEASON_MAP = {
+    1: 'spring',
+    2: 'summer',
+    3: 'autumn',
+    4: 'winter'
   };
 
   // -----------------------------------------------------------
@@ -41,6 +49,7 @@
   const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
   const els = {
+    seasonalBg: null,
     viewLanding: null,
     viewGame: null,
     btnStart: null,
@@ -48,7 +57,6 @@
     board: null,
     phase: null,
     roundTitle: null,
-    roundSubtitle: null,
     found: null,
     total: null,
 
@@ -124,12 +132,29 @@
   };
 
   // -----------------------------------------------------------
+  // MÉCANIQUE DE L'ARBRE — Background progressif
+  // -----------------------------------------------------------
+  const updateSeasonalBackground = (round, foundCount) => {
+    const season = SEASON_MAP[round] || 'spring';
+    
+    // Mise à jour de la classe de saison
+    els.seasonalBg.className = 'seasonal-bg';
+    els.seasonalBg.classList.add(`seasonal-bg--${season}`);
+
+    // Calcul de l'opacité (0% → 100% sur 5 paires)
+    const opacity = (foundCount / CONFIG.pairsPerRound) * 1;
+    
+    // Calcul du scale (1 → 1.05 progressif pour effet de "pousse")
+    const scale = 1 + (foundCount / CONFIG.pairsPerRound) * 0.05;
+
+    // Application des styles
+    els.seasonalBg.style.opacity = opacity;
+    els.seasonalBg.style.transform = `scale(${scale})`;
+  };
+
+  // -----------------------------------------------------------
   // GÉNÉRATION DU LAYOUT D'UNE MANCHE
   // -----------------------------------------------------------
-  /**
-   * Construit la liste de 12 slots pour la manche donnée.
-   * Chaque slot : { type: 'card', pairId, side, ... } ou { type: 'empty' }.
-   */
   const buildRoundLayout = (round) => {
     const roundData = state.data.rounds.find((r) => r.round === round);
     if (!roundData) return [];
@@ -194,24 +219,14 @@
     // En-tête de manche
     els.phase.textContent = `Manche ${round} / ${state.data.rounds.length}`;
     els.roundTitle.textContent = roundData.title;
-    els.roundSubtitle.textContent = roundData.subtitle;
     els.total.textContent = CONFIG.pairsPerRound;
     els.found.textContent = found.length;
-
-    // Background de manche
-    if (roundData.background) {
-      els.viewGame.style.setProperty('--round-bg', `url('${roundData.background}')`);
-      els.viewGame.classList.add('has-round-bg');
-    } else {
-      els.viewGame.style.removeProperty('--round-bg');
-      els.viewGame.classList.remove('has-round-bg');
-    }
 
     // Vidage
     els.board.innerHTML = '';
 
-    // Opacité du background selon les paires déjà trouvées (reprise de session)
-    revealBackground(found.length, CONFIG.pairsPerRound);
+    // Mise à jour du background saisonnier
+    updateSeasonalBackground(round, found.length);
 
     layout.forEach((slot, i) => {
       let cardEl;
@@ -243,214 +258,171 @@
         const mediaEl = document.createElement('div');
         mediaEl.className = 'card__media';
         if (slot.image) {
-          // L'image utilisateur sera intégrée plus tard ;
-          // tant que le fichier n'existe pas, le placeholder CSS reste visible.
           mediaEl.style.backgroundImage = `url('${slot.image}')`;
         }
         cardEl.appendChild(mediaEl);
 
         // Nom
-        const nameEl = document.createElement('p');
+        const nameEl = document.createElement('span');
         nameEl.className = 'card__name';
         nameEl.textContent = slot.name;
         cardEl.appendChild(nameEl);
 
-        // Légende
-        const captionEl = document.createElement('p');
-        captionEl.className = 'card__caption';
-        captionEl.textContent = slot.caption;
-        cardEl.appendChild(captionEl);
-
-        cardEl.addEventListener('click', onCardClick);
+        // Clic
+        cardEl.addEventListener('click', () => onCardClick(cardEl));
       }
 
-      cardEl.style.setProperty('--card-i', String(i));
       els.board.appendChild(cardEl);
     });
   };
 
   // -----------------------------------------------------------
-  // SÉLECTION DE CARTE
+  // CLIC SUR UNE CARTE
   // -----------------------------------------------------------
-  const onCardClick = (e) => {
+  const onCardClick = async (cardEl) => {
     if (state.locked) return;
-    const cardEl = e.currentTarget;
     if (cardEl.classList.contains('card--solved')) return;
+    if (cardEl.classList.contains('card--selected')) return;
 
     const pairId = cardEl.dataset.pairId;
     const side = cardEl.dataset.side;
 
-    // Désélection si on reclique la même carte
-    if (cardEl.classList.contains('card--selected')) {
-      cardEl.classList.remove('card--selected');
-      state.selected = state.selected.filter((s) => s.el !== cardEl);
-      return;
-    }
-
-    // Si déjà 2 cartes sélectionnées, on ignore (sécurité, normalement locked)
-    if (state.selected.length >= 2) return;
-
-    // Ajoute à la sélection
+    state.selected.push({ pairId, side, el: cardEl });
     cardEl.classList.add('card--selected');
-    state.selected.push({ el: cardEl, pairId, side });
 
-    // Si 2 cartes sélectionnées, on valide
     if (state.selected.length === 2) {
-      evaluateSelection();
+      state.locked = true;
+      await checkPair();
+      state.locked = false;
     }
   };
 
   // -----------------------------------------------------------
-  // DÉVOILEMENT PROGRESSIF DU BACKGROUND
+  // VÉRIFICATION D'UNE PAIRE
   // -----------------------------------------------------------
-  const revealBackground = (found, total) => {
-    // L'overlay part opaque (1) et perd 20% d'opacité à chaque bonne paire
-    const overlayOpacity = 1 - (found / total);
-    els.viewGame.style.setProperty('--bg-opacity', 1);
-    els.viewGame.style.setProperty('--overlay-opacity', overlayOpacity);
-  };
-
-  // -----------------------------------------------------------
-  // ÉVALUATION DE LA SÉLECTION
-  // -----------------------------------------------------------
-  const evaluateSelection = async () => {
+  const checkPair = async () => {
     const [a, b] = state.selected;
 
-    // Critère de succès : même pairId ET sides différents (un bio + un archi)
-    const samePair = a.pairId === b.pairId;
-    const differentSides = a.side !== b.side;
-    const isMatch = samePair && differentSides;
+    if (a.pairId === b.pairId && a.side !== b.side) {
+      // Bonne paire
+      a.el.classList.add('card--correct');
+      b.el.classList.add('card--correct');
 
-    state.locked = true;
+      await sleep(CONFIG.correctAnimDuration);
 
-    if (isMatch) {
-      await handleCorrect(a, b);
-    } else {
-      await handleWrong(a, b);
-    }
-
-    state.locked = false;
-  };
-
-  // -----------------------------------------------------------
-  // CAS — BONNE PAIRE
-  // -----------------------------------------------------------
-  const handleCorrect = async (a, b) => {
-    a.el.classList.remove('card--selected');
-    b.el.classList.remove('card--selected');
-    a.el.classList.add('card--correct');
-    b.el.classList.add('card--correct');
-
-    await sleep(CONFIG.correctAnimDuration);
-
-    a.el.classList.remove('card--correct');
-    b.el.classList.remove('card--correct');
-    a.el.classList.add('card--solved');
-    b.el.classList.add('card--solved');
-
-    // Enregistre la paire trouvée
-    const round = state.currentRound;
-    if (!state.foundByRound[round]) state.foundByRound[round] = [];
-    if (!state.foundByRound[round].includes(a.pairId)) {
+      const round = state.currentRound;
+      if (!state.foundByRound[round]) {
+        state.foundByRound[round] = [];
+      }
       state.foundByRound[round].push(a.pairId);
+      saveState();
+
+      // Mise à jour du background
+      const found = state.foundByRound[round];
+      updateSeasonalBackground(round, found.length);
+
+      // Mise à jour de l'UI
+      els.found.textContent = found.length;
+
+      // Marquer les cartes comme résolues
+      a.el.classList.add('card--solved');
+      b.el.classList.add('card--solved');
+
+      state.selected = [];
+
+      // Ouvrir la modale pédagogique
+      openPairModal(round, a.pairId);
+
+    } else {
+      // Mauvaise paire
+      a.el.classList.add('card--wrong');
+      b.el.classList.add('card--wrong');
+
+      await sleep(CONFIG.wrongResetDuration);
+
+      a.el.classList.remove('card--wrong', 'card--selected');
+      b.el.classList.remove('card--wrong', 'card--selected');
+
+      // Marquer les cartes comme ayant été essayées
+      const aKey = `${a.pairId}__${a.side}`;
+      const bKey = `${b.pairId}__${b.side}`;
+      
+      const aWasErrored = state.erroredCards[aKey];
+      const bWasErrored = state.erroredCards[bKey];
+
+      state.erroredCards[aKey] = true;
+      state.erroredCards[bKey] = true;
+      saveState();
+
+      // Afficher l'indice si les deux cartes avaient déjà été essayées
+      if (aWasErrored && bWasErrored) {
+        showHint(state.currentRound, a.pairId, b.pairId);
+      }
+
+      state.selected = [];
     }
-    els.found.textContent = state.foundByRound[round].length;
-    saveState();
-
-    // Dévoile progressivement le background selon les paires trouvées
-    revealBackground(state.foundByRound[round].length, CONFIG.pairsPerRound);
-
-    // Vide la sélection
-    state.selected = [];
-
-    // Affiche le pop-up pédagogique
-    openPairModal(a.pairId);
   };
 
   // -----------------------------------------------------------
-  // CAS — MAUVAISE PAIRE
+  // AFFICHAGE DES INDICES (Toast non-intrusif)
   // -----------------------------------------------------------
-  const handleWrong = async (a, b) => {
-    a.el.classList.add('card--wrong');
-    b.el.classList.add('card--wrong');
+  const showHint = (round, pairId1, pairId2) => {
+    const pair1 = findPair(round, pairId1);
+    const pair2 = findPair(round, pairId2);
 
-    // Marque ces cartes comme ayant fait une erreur (utile si on veut
-    // un indice plus avancé, ici on déclenche dès la 1ère erreur)
-    state.erroredCards[`${a.pairId}__${a.side}`] = true;
-    state.erroredCards[`${b.pairId}__${b.side}`] = true;
-    saveState();
+    // Choisir l'indice à afficher (priorité à la première paire)
+    const hintText = pair1?.hint || pair2?.hint || 'Indice non disponible.';
 
-    // Affiche l'indice de la paire correcte de la première carte cliquée
-    // Cela oriente le joueur vers le bon partenaire.
-    showHint(a.pairId);
+    els.hintToastText.textContent = hintText;
+    els.hintToast.hidden = false;
+    els.hintToast.classList.add('visible');
 
-    await sleep(CONFIG.wrongResetDuration);
-
-    a.el.classList.remove('card--wrong', 'card--selected');
-    b.el.classList.remove('card--wrong', 'card--selected');
-
-    state.selected = [];
-  };
-
-  // -----------------------------------------------------------
-  // INDICES
-  // -----------------------------------------------------------
-  const showHint = (pairId) => {
-    const pair = findPair(state.currentRound, pairId);
-    if (!pair || !pair.hint) return;
-
+    // Effacer le timer précédent
     if (state.hintTimer) {
       clearTimeout(state.hintTimer);
-      state.hintTimer = null;
     }
 
-    els.hintToastText.textContent = pair.hint;
-    els.hintToast.hidden = false;
-    // Force un reflow pour que la transition CSS prenne effet
-    void els.hintToast.offsetWidth;
-    els.hintToast.classList.add('is-visible');
-
+    // Timer pour masquer l'indice après 6s
     state.hintTimer = setTimeout(() => {
-      els.hintToast.classList.remove('is-visible');
-      // Cacher après la transition de fade-out
+      els.hintToast.classList.remove('visible');
       setTimeout(() => {
         els.hintToast.hidden = true;
-      }, 320);
+      }, 400);
     }, CONFIG.hintDuration);
   };
 
   // -----------------------------------------------------------
-  // MODALES — Ouverture / Fermeture
+  // MODALES — Gestion
   // -----------------------------------------------------------
-  const openModal = (modalEl) => {
-    modalEl.hidden = false;
-    // Re-trigger les animations CSS
-    modalEl.querySelectorAll('.modal__backdrop, .modal__panel').forEach((el) => {
-      el.style.animation = 'none';
-      void el.offsetWidth;
-      el.style.animation = '';
-    });
+  const openModal = (modal) => {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
   };
 
-  const closeModal = (modalEl) => {
-    modalEl.hidden = true;
+  const closeModal = (modal) => {
+    modal.hidden = true;
+    document.body.style.overflow = '';
   };
 
-  const openPairModal = (pairId) => {
-    const pair = findPair(state.currentRound, pairId);
+  // -----------------------------------------------------------
+  // MODALE — PAIRE TROUVÉE
+  // -----------------------------------------------------------
+  const openPairModal = (round, pairId) => {
+    const pair = findPair(round, pairId);
     if (!pair) return;
 
     els.modalPairTitle.textContent = pair.explanation.title;
-    els.modalPairBioName.textContent = pair.bio.name;
-    els.modalPairArchiName.textContent = pair.archi.name;
     els.modalPairText.textContent = pair.explanation.text;
 
-    // Backgrounds des visuels (fonctionne avec ou sans image)
+    els.modalPairBioName.textContent = pair.bio.name;
+    els.modalPairArchiName.textContent = pair.archi.name;
+
     if (pair.bio.image) {
       els.modalPairBioImg.style.backgroundImage = `url('${pair.bio.image}')`;
     } else {
       els.modalPairBioImg.style.backgroundImage = '';
     }
+
     if (pair.archi.image) {
       els.modalPairArchiImg.style.backgroundImage = `url('${pair.archi.image}')`;
     } else {
@@ -492,7 +464,7 @@
 
     openModal(els.modalRound);
 
-    // Animation de remplissage de la barre, déclenchée après l'apparition
+    // Animation de remplissage de la barre
     requestAnimationFrame(() => {
       setTimeout(() => {
         els.modalRoundFill.style.width = `${pct}%`;
@@ -526,6 +498,12 @@
 
   const onEndClose = () => {
     closeModal(els.modalEnd);
+    
+    // Reset du background
+    els.seasonalBg.style.opacity = 0;
+    els.seasonalBg.style.transform = 'scale(1)';
+    els.seasonalBg.className = 'seasonal-bg';
+    
     showView('landing');
   };
 
@@ -568,8 +546,7 @@
       state.erroredCards = saved.erroredCards || {};
       state.layoutByRound = saved.layoutByRound || {};
 
-      // Sécurité : si la manche en cours est déjà complétée à la reprise,
-      // on passe à la suivante (ou on termine).
+      // Sécurité : si la manche en cours est déjà complétée
       const round = state.currentRound;
       const found = state.foundByRound[round] || [];
       if (found.length >= CONFIG.pairsPerRound) {
@@ -593,8 +570,20 @@
 
   const onQuit = () => {
     saveState();
-    showView('landing');
-    updateStartButtonLabel();
+    
+    // Reset visuel du background
+    const round = state.currentRound;
+    const found = state.foundByRound[round] || [];
+    
+    // Fade out progressif
+    els.seasonalBg.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    els.seasonalBg.style.opacity = 0;
+    els.seasonalBg.style.transform = 'scale(1)';
+    
+    setTimeout(() => {
+      showView('landing');
+      updateStartButtonLabel();
+    }, 300);
   };
 
   // Met à jour le libellé du bouton landing (Commencer / Reprendre)
@@ -615,6 +604,7 @@
   // BIND DES ÉLÉMENTS DOM
   // -----------------------------------------------------------
   const bindDom = () => {
+    els.seasonalBg = $('#seasonal-bg');
     els.viewLanding = $('#view-landing');
     els.viewGame = $('#view-game');
     els.btnStart = $('#btn-start');
@@ -622,7 +612,6 @@
     els.board = $('#board');
     els.phase = $('#game-phase');
     els.roundTitle = $('#game-round-title');
-    els.roundSubtitle = $('#game-round-subtitle');
     els.found = $('#game-found');
     els.total = $('#game-total');
 
@@ -656,8 +645,7 @@
     els.modalEndRestart.addEventListener('click', onEndRestart);
     els.modalEndClose.addEventListener('click', onEndClose);
 
-    // Échap ferme la modale paire (mais pas les autres qui sont des
-    // transitions obligatoires)
+    // Échap ferme la modale paire
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !els.modalPair.hidden) {
         onPairModalContinue();

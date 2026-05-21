@@ -2,432 +2,436 @@
   "rounds": [
     {
       "round": 1,
-      "title": "Fondations & Structures porteuses",
-      "subtitle": "Comment le vivant tient debout",
+      "season": "spring",
+      "title": "Printemps · Biomimétisme & Technologie",
+      "subtitle": "Le vivant comme modèle d'innovation",
       "background": "img/round1.jpeg",
       "pairs": [
         {
           "id": "r1-p1",
           "bio": {
-            "name": "Nid de tisserin",
+            "name": "Le martin-pêcheur",
             "label": "Biologie",
-            "image": "img/bio/nid-tisserin.jpg",
-            "caption": "Tressage végétal entrelacé"
+            "image": "img/bio/martin-pecheur.jpg",
+            "caption": "Bec fuselé du martin-pêcheur"
           },
           "archi": {
-            "name": "Coque tressée",
-            "label": "Architecture",
-            "image": "img/archi/coque-tressee.jpg",
-            "caption": "Toiture en vannerie structurelle"
+            "name": "Le TGV Japonais",
+            "label": "Technologie",
+            "image": "img/archi/tgv-japonais.jpg",
+            "caption": "Nez profilé du Shinkansen"
           },
-          "hint": "Pense à l'entrelacement de fibres souples qui se renforcent mutuellement.",
+          "hint": "Pense à la forme du bec et au passage d'un milieu à l'autre sans bruit.",
           "explanation": {
-            "title": "L'ingénierie du nid",
-            "text": "Le tisserin entrelace des brins d'herbe pour créer une structure suspendue d'une légèreté et d'une résistance remarquables. Cette logique inspire aujourd'hui des toitures en vannerie où des lattes de bois ou de bambou tressées portent leur propre charge sans armature lourde, répartissant les efforts comme un nid grandeur nature."
+            "title": "Le bec qui inspire le train",
+            "text": "Le TGV Japonais est rapide mais aussi très bruyant. Pour le rendre plus discret sans perdre de vitesse, l'ingénieur Eiji Nakatsu s'est inspiré du martin-pêcheur. Maintenant, l'avant du train a une forme fuselée imitant le bec d'un oiseau."
           }
         },
         {
           "id": "r1-p2",
           "bio": {
-            "name": "Os spongieux",
+            "name": "Le gecko",
             "label": "Biologie",
-            "image": "img/bio/os-spongieux.jpg",
-            "caption": "Maille osseuse alvéolée"
+            "image": "img/bio/gecko.jpg",
+            "caption": "Pattes adhésives du gecko"
           },
           "archi": {
-            "name": "Poutre alvéolaire",
-            "label": "Architecture",
-            "image": "img/archi/poutre-alveolaire.jpg",
-            "caption": "Acier ajouré haute performance"
+            "name": "La Geckskin",
+            "label": "Technologie",
+            "image": "img/archi/geckskin.jpg",
+            "caption": "Adhésif puissant et réversible"
           },
-          "hint": "Une matière allégée par des vides organisés selon les lignes de force.",
+          "hint": "Un animal qui marche au plafond… et une colle qui tient une télévision.",
           "explanation": {
-            "title": "La logique de l'os trabéculaire",
-            "text": "À l'intérieur des os longs, la matière s'organise en travées qui suivent précisément les lignes de contrainte mécanique. Les ingénieurs reproduisent ce principe dans les poutres alvéolaires : on retire la matière là où elle ne travaille pas, ce qui réduit le poids de 30 % à 50 % sans perte de portance."
+            "title": "L'adhésif du gecko",
+            "text": "Le gecko est un des rares animaux à pouvoir se déplacer au plafond. Des chercheurs se sont inspirés de cet animal pour créer un adhésif assez puissant pour pouvoir soutenir une télévision."
           }
         },
         {
           "id": "r1-p3",
           "bio": {
-            "name": "Coquille d'œuf",
+            "name": "La termitière",
             "label": "Biologie",
-            "image": "img/bio/coquille-oeuf.jpg",
-            "caption": "Voile minéral à double courbure"
+            "image": "img/bio/termitiere.jpg",
+            "caption": "Cheminées de ventilation naturelle"
           },
           "archi": {
-            "name": "Toit en coque mince",
+            "name": "L'Eastgate Building",
             "label": "Architecture",
-            "image": "img/archi/coque-mince.jpg",
-            "caption": "Voile de béton à grande portée"
+            "image": "img/archi/eastgate-building.jpg",
+            "caption": "Centre commercial à Harare, Zimbabwe"
           },
-          "hint": "Une surface fine qui doit sa résistance à sa forme courbe, pas à son épaisseur.",
+          "hint": "Un bâtiment qui consomme 90 % d'énergie de moins grâce à une régulation passive de température.",
           "explanation": {
-            "title": "La force de la double courbure",
-            "text": "Une coquille d'œuf supporte sans broncher la pression d'une main qui la serre dans la paume : sa double courbure répartit la charge sur toute la surface. Les architectes comme Félix Candela ou Heinz Isler ont traduit ce principe dans des voiles de béton de quelques centimètres d'épaisseur qui couvrent des dizaines de mètres."
+            "title": "La climatisation des termites",
+            "text": "Ce centre commercial consomme 90 % d'énergie de moins que la moyenne, grâce à une régulation dite \"passive\" de la température intérieure inspirée de la structure des termitières."
           }
         },
         {
           "id": "r1-p4",
           "bio": {
-            "name": "Tige de bambou",
+            "name": "La trompe du moustique",
             "label": "Biologie",
-            "image": "img/bio/bambou.jpg",
-            "caption": "Tube creux à nœuds régulièrement espacés"
+            "image": "img/bio/moustique.jpg",
+            "caption": "Trompe fine et conique du moustique"
           },
           "archi": {
-            "name": "Mât tubulaire creux",
-            "label": "Architecture",
-            "image": "img/archi/mat-tubulaire.jpg",
-            "caption": "Structure verticale haute"
+            "name": "L'aiguille médicale indolore",
+            "label": "Technologie",
+            "image": "img/archi/aiguille-medicale.jpg",
+            "caption": "Aiguille conique ultra-fine"
           },
-          "hint": "Un cylindre creux est plus rigide qu'une barre pleine de même poids — où voit-on ça dans la nature ?",
+          "hint": "Une piqûre désagréable mais indolore… dont la forme inspire la médecine moderne.",
           "explanation": {
-            "title": "Le génie du tube creux",
-            "text": "Le bambou pousse en tube cloisonné par des nœuds : c'est la géométrie la plus efficace pour résister à la flexion avec un minimum de matière. Les ingénieurs reprennent ce principe dans les structures tubulaires creuses qui équipent gratte-ciels, éoliennes et pylônes, où chaque diaphragme interne joue le rôle d'un nœud de bambou."
+            "title": "La piqûre sans douleur",
+            "text": "Les piqûres sont souvent douloureuses. C'est pourquoi, une société japonaise s'est inspirée de la piqûre du moustique, indolore bien que désagréable, et a inventé une nouvelle aiguille conique et plus fine."
           }
         },
         {
           "id": "r1-p5",
           "bio": {
-            "name": "Racines d'arbre",
+            "name": "Les fruits de bardane",
             "label": "Biologie",
-            "image": "img/bio/racines.jpg",
-            "caption": "Ramification ancrée en profondeur"
+            "image": "img/bio/bardane.jpg",
+            "caption": "Crochets végétaux accrocheurs"
           },
           "archi": {
-            "name": "Fondations ramifiées",
-            "label": "Architecture",
-            "image": "img/archi/fondations-ramifiees.jpg",
-            "caption": "Pieux à branches multiples"
+            "name": "Le Velcro",
+            "label": "Technologie",
+            "image": "img/archi/velcro.jpg",
+            "caption": "Système scratch velours/crochets"
           },
-          "hint": "Pour tenir debout, certaines structures plongent et se divisent dans le sol.",
+          "hint": "Une fixation sans colle, inspirée d'une plante qui s'accroche aux poils des animaux.",
           "explanation": {
-            "title": "Ancrage par division",
-            "text": "Un arbre résiste au vent grâce à un réseau racinaire qui se ramifie pour multiplier les points d'ancrage. Les fondations ramifiées (root piles) appliquent cette stratégie : un pieu central se divise en branches inclinées qui répartissent les charges dans un volume de sol bien plus large qu'un pieu droit."
+            "title": "L'invention du velcro",
+            "text": "En imitant les fruits de bardane qui s'accrochent aux poils d'animaux, un ingénieur suisse a inventé le velcro avec une partie \"velours\" et une partie \"crochets\"."
           }
         }
       ]
     },
     {
       "round": 2,
-      "title": "Enveloppes & Peaux",
-      "subtitle": "Quand la façade devient peau",
+      "season": "summer",
+      "title": "Été · Mouvement & Énergie",
+      "subtitle": "La nature optimise chaque déplacement",
       "background": "img/round2.jpeg",
       "pairs": [
         {
           "id": "r2-p1",
           "bio": {
-            "name": "Peau de requin",
+            "name": "Le nautile",
             "label": "Biologie",
-            "image": "img/bio/peau-requin.jpg",
-            "caption": "Denticules microscopiques alignés"
+            "image": "img/bio/nautile.jpg",
+            "caption": "Coquille spiralée du nautile"
           },
           "archi": {
-            "name": "Façade hydrodynamique",
-            "label": "Architecture",
-            "image": "img/archi/facade-hydrodynamique.jpg",
-            "caption": "Revêtement micro-structuré"
+            "name": "Les turboréacteurs",
+            "label": "Technologie",
+            "image": "img/archi/turboreacteur.jpg",
+            "caption": "Moteur à réaction spiralé"
           },
-          "hint": "Une surface qui paraît lisse mais ne l'est pas — et qui glisse mieux pour cette raison.",
+          "hint": "Une coquille en spirale qui propulse silencieusement… comme un réacteur.",
           "explanation": {
-            "title": "Le secret des denticules",
-            "text": "La peau du requin est couverte de minuscules écailles dentées qui canalisent les filets d'eau et réduisent la traînée de près de 10 %. Cette texture inspire des revêtements de façade qui réduisent les turbulences du vent et l'encrassement, et des films appliqués sur les avions et les coques de bateaux."
+            "title": "La propulsion spiralée",
+            "text": "De nombreux engins à moteur utilisent ce mode de propulsion. Cette force motrice est utilisée dans la nature par le nautile, dont la coquille en forme de spirale lui permet de se déplacer silencieusement."
           }
         },
         {
           "id": "r2-p2",
           "bio": {
-            "name": "Feuille de lotus",
+            "name": "Les nageoires de baleines à bosse",
             "label": "Biologie",
-            "image": "img/bio/lotus.jpg",
-            "caption": "Surface superhydrophobe"
+            "image": "img/bio/nageoire-baleine.jpg",
+            "caption": "Bord d'attaque en tubercules"
           },
           "archi": {
-            "name": "Revêtement autonettoyant",
-            "label": "Architecture",
-            "image": "img/archi/revetement-autonettoyant.jpg",
-            "caption": "Peinture nanostructurée"
+            "name": "Les éoliennes",
+            "label": "Technologie",
+            "image": "img/archi/pale-eolienne.jpg",
+            "caption": "Pale à bord d'attaque ondulé"
           },
-          "hint": "Une matière sur laquelle l'eau ne se pose jamais vraiment — et emporte la poussière en partant.",
+          "hint": "Un bord d'attaque bosselé qui glisse mieux dans le fluide qu'un bord lisse.",
           "explanation": {
-            "title": "L'effet lotus",
-            "text": "À l'échelle microscopique, la feuille de lotus est hérissée de bosses cireuses qui empêchent l'eau d'adhérer : chaque goutte roule et embarque les saletés. Les peintures et enduits inspirés de cet effet permettent à des façades de rester propres sous la simple action de la pluie, réduisant l'entretien et l'usage de détergents."
+            "title": "Les tubercules de la baleine",
+            "text": "Au Canada, une société commercialise de nouvelles éoliennes permettant de réaliser des économies d'énergie importantes, en reproduisant les cannelures se trouvant sur les nageoires des baleines à bosse."
           }
         },
         {
           "id": "r2-p3",
           "bio": {
-            "name": "Carapace de tortue",
+            "name": "Les lucioles",
             "label": "Biologie",
-            "image": "img/bio/carapace.jpg",
-            "caption": "Plaques superposées et imbriquées"
+            "image": "img/bio/luciole.jpg",
+            "caption": "Abdomen lumineux à écailles dentées"
           },
           "archi": {
-            "name": "Toiture en écailles",
-            "label": "Architecture",
-            "image": "img/archi/toiture-ecailles.jpg",
-            "caption": "Tuiles modulaires superposées"
+            "name": "Les lampes LED",
+            "label": "Technologie",
+            "image": "img/archi/lampe-led.jpg",
+            "caption": "LED à rendement lumineux optimisé"
           },
-          "hint": "Des éléments rigides qui se chevauchent pour former un bouclier continu et flexible.",
+          "hint": "L'abdomen couvert d'écailles en dents de scie qui aide l'insecte à briller plus fort.",
           "explanation": {
-            "title": "La protection par superposition",
-            "text": "La carapace de la tortue combine rigidité globale et tolérance locale grâce à des écailles qui se chevauchent. Les toitures et façades en écailles métalliques ou céramiques reprennent ce principe : chaque élément reste petit, démontable et léger, mais l'assemblage forme une enveloppe étanche et résistante aux chocs."
+            "title": "La lumière des lucioles",
+            "text": "Des chercheurs ont découvert qu'en modifiant des LED en s'inspirant de l'abdomen des lucioles, ils pouvaient augmenter leur luminosité. L'abdomen de la luciole, couvert d'écailles en dents de scie, aide l'insecte à briller plus fort."
           }
         },
         {
           "id": "r2-p4",
           "bio": {
-            "name": "Pomme de pin",
+            "name": "Le papillon Greta oto",
             "label": "Biologie",
-            "image": "img/bio/pomme-pin.jpg",
-            "caption": "Écailles qui réagissent à l'humidité"
+            "image": "img/bio/papillon-greta-oto.jpg",
+            "caption": "Ailes transparentes anti-reflet"
           },
           "archi": {
-            "name": "Façade hygromorphe",
-            "label": "Architecture",
-            "image": "img/archi/facade-hygromorphe.jpg",
-            "caption": "Panneaux à ouverture automatique"
+            "name": "Les verres anti-reflet",
+            "label": "Technologie",
+            "image": "img/archi/verres-anti-reflet.jpg",
+            "caption": "Matériau transparent non réfléchissant"
           },
-          "hint": "Un mécanisme qui s'ouvre ou se ferme tout seul, sans moteur, en réponse à l'air.",
+          "hint": "Des ailes transparentes qui ne réfléchissent pas la lumière — un secret pour les optiques.",
           "explanation": {
-            "title": "Le mouvement sans énergie",
-            "text": "La pomme de pin ouvre et ferme ses écailles selon l'humidité de l'air, grâce à deux couches de fibres qui se dilatent différemment. Des architectes comme Achim Menges exploitent ce principe pour créer des panneaux de façade qui s'ouvrent quand l'air est sec et se ferment sous la pluie, sans capteur ni moteur — uniquement par la matière."
+            "title": "La transparence parfaite",
+            "text": "Des chercheurs allemands travaillent un matériau transparent ne reflétant pas la lumière. Leurs études s'inspirent des ailes du papillon Greta oto qui possède cette particularité."
           }
         },
         {
           "id": "r2-p5",
           "bio": {
-            "name": "Plumage d'oiseau",
+            "name": "La peau du requin",
             "label": "Biologie",
-            "image": "img/bio/plumage.jpg",
-            "caption": "Couches de duvet et de plumes"
+            "image": "img/bio/peau-requin.jpg",
+            "caption": "Denticules microscopiques alignés"
           },
           "archi": {
-            "name": "Isolation multicouche",
-            "label": "Architecture",
-            "image": "img/archi/isolation-multicouche.jpg",
-            "caption": "Paroi thermique stratifiée"
+            "name": "Les combinaisons de natation",
+            "label": "Technologie",
+            "image": "img/archi/combinaison-natation.jpg",
+            "caption": "Surface ultra-rapide calquée sur le requin"
           },
-          "hint": "Ce qui isole, ce n'est pas la matière, c'est l'air emprisonné entre plusieurs strates.",
+          "hint": "Une surface qui paraît lisse mais ne l'est pas — et qui glisse mieux pour cette raison.",
           "explanation": {
-            "title": "L'air comme isolant",
-            "text": "Le plumage d'un oiseau isole en piégeant de l'air immobile entre des plumes structurées en couches. Les parois multicouches reprennent cette logique : alterner matériaux denses et lames d'air ou matériaux à porosité contrôlée donne, à épaisseur égale, une performance thermique très supérieure à un mur homogène."
+            "title": "La peau qui fend l'eau",
+            "text": "Une société propose des combinaisons de natation ultra-rapides dont la surface est calquée sur la peau des requins. Cela permet de faciliter la glisse et la pénétration dans l'eau."
           }
         }
       ]
     },
     {
       "round": 3,
-      "title": "Régulation & Flux",
-      "subtitle": "Faire circuler l'air, l'eau et les forces",
+      "season": "autumn",
+      "title": "Automne · Matériaux & Construction",
+      "subtitle": "Quand la matière vivante inspire le bâtiment",
       "background": "img/round3.jpeg",
       "pairs": [
         {
           "id": "r3-p1",
           "bio": {
-            "name": "Termitière",
+            "name": "L'aile du papillon morpho",
             "label": "Biologie",
-            "image": "img/bio/termitiere.jpg",
-            "caption": "Cheminées de ventilation passive"
+            "image": "img/bio/papillon-morpho.jpg",
+            "caption": "Écailles thermorégulatrices en chitine"
           },
           "archi": {
-            "name": "Bâtiment Eastgate",
-            "label": "Architecture",
-            "image": "img/archi/eastgate.jpg",
-            "caption": "Climatisation passive par tirage"
+            "name": "Les panneaux solaires",
+            "label": "Technologie",
+            "image": "img/archi/panneaux-solaires.jpg",
+            "caption": "Photovoltaïque à régulation thermique"
           },
-          "hint": "Un édifice qui se rafraîchit tout seul grâce à des conduits verticaux et au soleil.",
+          "hint": "Des écailles qui régulent la température selon la chaleur ambiante — comme un panneau qui ne surchauffe pas.",
           "explanation": {
-            "title": "Le climat sans climatiseur",
-            "text": "Les termites construisent des cheminées qui créent un tirage thermique naturel : l'air chaud monte et aspire l'air frais des galeries profondes. L'Eastgate Centre à Harare, conçu par Mick Pearce, applique ce principe pour climatiser passivement 30 000 m² de bureaux en consommant 10 % de l'énergie d'un immeuble équivalent."
+            "title": "L'aile thermorégulatrice",
+            "text": "Les ailes des papillons intéressent les chercheurs pour la conception de panneaux solaires photovoltaïques plus rentables, qui évitent le problème trop commun de la surchauffe. Le rendement des panneaux diminuant quand leur température augmente, on a tout intérêt à les maintenir à bonne température — comme le fait la chitine du morpho."
           }
         },
         {
           "id": "r3-p2",
           "bio": {
-            "name": "Toile d'araignée",
+            "name": "La cicatrisation de la peau",
             "label": "Biologie",
-            "image": "img/bio/toile-araignee.jpg",
-            "caption": "Réseau de fils en tension"
+            "image": "img/bio/cicatrice.jpg",
+            "caption": "Auto-réparation des tissus cutanés"
           },
           "archi": {
-            "name": "Pont suspendu",
+            "name": "Le béton autocicatrisant",
             "label": "Architecture",
-            "image": "img/archi/pont-suspendu.jpg",
-            "caption": "Câbles porteurs en tension pure"
+            "image": "img/archi/beton-autocicatrisant.jpg",
+            "caption": "Béton à bactéries encapsulées"
           },
-          "hint": "Plutôt que de pousser, ces structures tirent — la matière travaille en traction.",
+          "hint": "Quand une fissure apparaît, un mécanisme interne se réveille pour colmater la brèche.",
           "explanation": {
-            "title": "La tension comme principe",
-            "text": "La toile d'araignée tient sur des fils en pure tension : aucune partie ne subit de compression, ce qui maximise l'efficacité du matériau. Les ponts suspendus et les structures en câbles (chapiteaux, stades, passerelles) appliquent cette logique : des câbles d'acier en traction pour franchir des portées que la maçonnerie ne pourrait pas atteindre."
+            "title": "Le béton qui se répare",
+            "text": "La cicatrisation de la peau inspire l'autocicatrisation des bétons : quand il y a une fissure, des bactéries encapsulées dans le béton se réveillent au contact de l'eau, se nourrissent des nutriments présents et produisent du carbonate de calcium qui colmate la fissure."
           }
         },
         {
           "id": "r3-p3",
           "bio": {
-            "name": "Alvéole d'abeille",
+            "name": "Le coléoptère de Namibie",
             "label": "Biologie",
-            "image": "img/bio/alveole.jpg",
-            "caption": "Pavage hexagonal régulier"
+            "image": "img/bio/coleoptere-namibie.jpg",
+            "caption": "Dos hydrophile pour collecter le brouillard"
           },
           "archi": {
-            "name": "Structure nid d'abeille",
-            "label": "Architecture",
-            "image": "img/archi/nid-abeille.jpg",
-            "caption": "Panneau composite alvéolé"
+            "name": "Les filets capteurs de rosée",
+            "label": "Technologie",
+            "image": "img/archi/filets-rosee.jpg",
+            "caption": "Filets à surface hydrophile/hydrofuge"
           },
-          "hint": "La géométrie qui couvre une surface avec le moins de matière possible.",
+          "hint": "Collecter l'eau du brouillard dans un désert grâce à une surface à double texture.",
           "explanation": {
-            "title": "L'optimum hexagonal",
-            "text": "L'hexagone est la forme qui pave un plan avec le périmètre minimal — donc le moins de matière pour le plus de volume. Les panneaux dits « nid d'abeille » utilisent cette géométrie dans une âme en aluminium ou en carton entre deux peaux, atteignant des rapports résistance/poids exceptionnels utilisés en aéronautique et en architecture."
+            "title": "Boire le brouillard",
+            "text": "Le scarabée Stenocara collecte l'eau du brouillard dans le désert de Namibie grâce à son dos alternant surfaces hydrophiles et hydrofuges. Les gouttes s'accrochent aux bosses, grossissent, puis glissent vers sa bouche. Ce principe inspire des filets capteurs de rosée pour alimenter en eau des régions arides."
           }
         },
         {
           "id": "r3-p4",
           "bio": {
-            "name": "Nervures de feuille",
+            "name": "Le corail",
             "label": "Biologie",
-            "image": "img/bio/nervures.jpg",
-            "caption": "Réseau de distribution hiérarchisé"
+            "image": "img/bio/corail.jpg",
+            "caption": "Polypes sécrétant du carbonate de calcium"
           },
           "archi": {
-            "name": "Plan urbain dendritique",
+            "name": "Le ciment neutre en carbone",
             "label": "Architecture",
-            "image": "img/archi/plan-dendritique.jpg",
-            "caption": "Voirie ramifiée et hiérarchisée"
+            "image": "img/archi/ciment-carbone.jpg",
+            "caption": "Liant minéral qui séquestre le CO₂"
           },
-          "hint": "Comment irriguer un territoire avec le moins de chemin possible ? Regarde une feuille.",
+          "hint": "Un organisme vivant qui construit sa structure dure en captant le CO₂ de l'eau.",
           "explanation": {
-            "title": "Distribuer sans gaspiller",
-            "text": "Les nervures d'une feuille distribuent eau et nutriments selon une hiérarchie : grosses nervures pour le débit, fines nervures pour la desserte fine. Les plans urbains et les réseaux de transport efficaces reprennent cette logique dendritique : des axes majeurs, puis secondaires, puis capillaires, pour minimiser la distance totale tout en desservant chaque point."
+            "title": "Le ciment du corail",
+            "text": "Les polypes de corail absorbent les minéraux et le CO₂, puis sécrètent du carbonate de calcium pour former leur structure dure. Sur cette base, de nouvelles méthodes de production de ciment neutre en carbone ont été créées, capturant le CO₂ pour produire des matériaux durables."
           }
         },
         {
           "id": "r3-p5",
           "bio": {
-            "name": "Nageoire de baleine",
+            "name": "La corbeille de Vénus",
             "label": "Biologie",
-            "image": "img/bio/nageoire-baleine.jpg",
-            "caption": "Bord d'attaque en tubercules"
+            "image": "img/bio/corbeille-venus.jpg",
+            "caption": "Éponge à squelette de fibres de verre"
           },
           "archi": {
-            "name": "Pale d'éolienne tuberculée",
+            "name": "Le 30 St Mary Axe",
             "label": "Architecture",
-            "image": "img/archi/pale-eolienne.jpg",
-            "caption": "Profil aérodynamique optimisé"
+            "image": "img/archi/30-st-mary-axe.jpg",
+            "caption": "The Gherkin, Londres"
           },
-          "hint": "Un bord d'attaque ondulé glisse mieux dans le fluide qu'un bord parfaitement lisse.",
+          "hint": "Un gratte-ciel londonien dont la structure spiralée rappelle le squelette de cette éponge marine.",
           "explanation": {
-            "title": "Les tubercules de la baleine",
-            "text": "La baleine à bosse a des tubercules ondulés sur le bord d'attaque de ses nageoires, ce qui lui permet de manœuvrer à très bas angle d'attaque sans décrocher. Cette découverte (effet tubercule) inspire des pales d'éoliennes et de turbines à bord d'attaque ondulé, qui captent jusqu'à 20 % d'énergie en plus dans les vents faibles."
+            "title": "L'éponge qui inspire un gratte-ciel",
+            "text": "La corbeille de Vénus est une éponge constituée d'un treillis de fibres de verre disposées verticalement, horizontalement et en diagonale, lui conférant une grande solidité. La tour 30 St Mary Axe à Londres — surnommée The Gherkin — est conçue avec la même morphologie spiralée."
           }
         }
       ]
     },
     {
       "round": 4,
-      "title": "Matière vivante & Intelligence adaptative",
-      "subtitle": "Quand le bâtiment devient organisme",
+      "season": "winter",
+      "title": "Hiver · Surfaces & Comportements adaptatifs",
+      "subtitle": "Quand le vivant se défend et s'adapte",
       "background": "img/round4.jpeg",
       "pairs": [
         {
           "id": "r4-p1",
           "bio": {
-            "name": "Mycélium",
+            "name": "L'effet lotus",
             "label": "Biologie",
-            "image": "img/bio/mycelium.jpg",
-            "caption": "Réseau filamenteux fongique"
+            "image": "img/bio/lotus.jpg",
+            "caption": "Bosses microscopiques superhydrophobes"
           },
           "archi": {
-            "name": "Brique biosourcée",
+            "name": "La surface hydrophobe",
             "label": "Architecture",
-            "image": "img/archi/brique-mycelium.jpg",
-            "caption": "Matériau cultivé en moule"
+            "image": "img/archi/revetement-autonettoyant.jpg",
+            "caption": "Peinture nanostructurée autonettoyante"
           },
-          "hint": "Un matériau qui ne se fabrique pas — il se cultive comme un champignon.",
+          "hint": "Une surface sur laquelle l'eau ne se pose jamais — et emporte la poussière en partant.",
           "explanation": {
-            "title": "Faire pousser ses murs",
-            "text": "Le mycélium, partie souterraine des champignons, peut être cultivé sur des déchets agricoles dans des moules : en quelques jours, il forme un matériau rigide, isolant et entièrement biodégradable. Des projets comme la Hy-Fi Tower de David Benjamin (MoMA PS1, 2014) démontrent qu'on peut littéralement faire pousser des briques pour bâtir."
+            "title": "L'effet lotus",
+            "text": "La surface de la feuille de lotus contient des bosses microscopiques qui empêchent les molécules d'eau d'adhérer. L'eau roule instantanément et ramasse toute saleté en cours de route. Ce principe est appliqué dans le bâtiment : peintures pour façades, produits pour vitrages et tuiles autonettoyants."
           }
         },
         {
           "id": "r4-p2",
           "bio": {
-            "name": "Corail",
+            "name": "Le manchot",
             "label": "Biologie",
-            "image": "img/bio/corail.jpg",
-            "caption": "Squelette calcaire poreux"
+            "image": "img/bio/manchot.jpg",
+            "caption": "Regroupement thermique sur la banquise"
           },
           "archi": {
-            "name": "Béton bio-mimétique",
+            "name": "Le District 11",
             "label": "Architecture",
-            "image": "img/archi/beton-poreux.jpg",
-            "caption": "Liant minéral à porosité contrôlée"
+            "image": "img/archi/district-11.jpg",
+            "caption": "Centre d'innovation Skolkovo, Russie"
           },
-          "hint": "Une matière dure construite à partir de ce qui flotte autour — y compris du CO₂.",
+          "hint": "Des villas regroupées en tortue pour économiser 5°C — comme des manchots serrés dans le froid.",
           "explanation": {
-            "title": "Construire avec le carbone",
-            "text": "Le corail capte le CO₂ dissous dans l'eau de mer pour construire son squelette calcaire. Des bétons bio-mimétiques (comme ceux développés par Biomason ou CarbonCure) reproduisent ce processus : ils séquestrent durablement le CO₂ dans leur masse au lieu de l'émettre, transformant le matériau le plus polluant de la construction en puits de carbone."
+            "title": "L'architecture manchot",
+            "text": "Pour ce projet, l'agence A. Bechu & Associés s'est inspirée des manchots qui se rassemblent en cercle sur la banquise pour se tenir mutuellement chaud. Une centaine de villas regroupées dix par dix dans une clairière permettent d'économiser 5°C de température."
           }
         },
         {
           "id": "r4-p3",
           "bio": {
-            "name": "Cactus saguaro",
+            "name": "La moule",
             "label": "Biologie",
-            "image": "img/bio/saguaro.jpg",
-            "caption": "Tige cannelée verticalement"
+            "image": "img/bio/moule.jpg",
+            "caption": "Fixation tenace sur rochers et métaux"
           },
           "archi": {
-            "name": "Façade cannelée",
-            "label": "Architecture",
-            "image": "img/archi/facade-cannelee.jpg",
-            "caption": "Auto-ombrage par relief vertical"
+            "name": "La colle forte",
+            "label": "Technologie",
+            "image": "img/archi/colle-forte.jpg",
+            "caption": "Adhésif bio-inspiré pour métaux"
           },
-          "hint": "Un relief vertical qui projette son ombre sur lui-même pour rester frais.",
+          "hint": "Un mollusque qui adhère aux rochers et même aux métaux — une colle incroyable.",
           "explanation": {
-            "title": "S'ombrer soi-même",
-            "text": "Le saguaro survit au désert grâce à ses cannelures verticales qui, à toute heure du jour, projettent une partie de l'ombre sur la tige elle-même tout en augmentant la surface d'échange thermique. Des tours comme l'Al Bahr (Abu Dhabi) reprennent ce principe : un relief vertical de façade réduit le gain solaire de 30 % à 50 % par rapport à une paroi lisse."
+            "title": "La colle des moules",
+            "text": "Les moules peuvent se fixer aux métaux et cette faculté inspire des chercheurs. Une \"colle\" bio-inspirée a été développée, capable de lier des protéines sur des surfaces métalliques, avec une demande de brevet déposée par l'Institut Charles Sadron."
           }
         },
         {
           "id": "r4-p4",
           "bio": {
-            "name": "Bardane",
+            "name": "Le zèbre",
             "label": "Biologie",
-            "image": "img/bio/bardane.jpg",
-            "caption": "Crochets végétaux accrocheurs"
+            "image": "img/bio/zebre.jpg",
+            "caption": "Rayures noires et blanches thermorégulatrices"
           },
           "archi": {
-            "name": "Fixation velcro",
+            "name": "Le camouflage",
             "label": "Architecture",
-            "image": "img/archi/fixation-velcro.jpg",
-            "caption": "Assemblage réversible sans visserie"
+            "image": "img/archi/camouflage.jpg",
+            "caption": "Enveloppe à motif contrasté"
           },
-          "hint": "Une fixation sans clou ni colle, qui se sépare et se rattache à volonté.",
+          "hint": "Un motif contrasté qui trompe l'œil et régule la température — sur un animal comme sur un bâtiment.",
           "explanation": {
-            "title": "L'assemblage réversible",
-            "text": "George de Mestral a inventé le velcro en observant les crochets de la bardane qui s'accrochaient à son chien. Appliqué à l'architecture, ce principe d'assemblage mécanique réversible permet des bâtiments démontables et recyclables : on assemble sans colle, sans soudure, et on désassemble pour réemployer chaque composant."
+            "title": "Le zèbre et le bâtiment",
+            "text": "Les rayures du zèbre créent un effet d'optique qui trompe les prédateurs, et pourraient aussi créer un flux d'air différentiel entre les bandes noires et blanches ayant un effet de refroidissement. Ces principes s'appliquent à l'enveloppe du bâtiment : camouflage dans l'environnement ou thermorégulation de façade."
           }
         },
         {
           "id": "r4-p5",
           "bio": {
-            "name": "Tournesol",
+            "name": "L'os humain",
             "label": "Biologie",
-            "image": "img/bio/tournesol.jpg",
-            "caption": "Héliotropisme actif"
+            "image": "img/bio/os-humain.jpg",
+            "caption": "Structure trabéculaire légère et résistante"
           },
           "archi": {
-            "name": "Panneau héliotrope",
+            "name": "La Tour Eiffel",
             "label": "Architecture",
-            "image": "img/archi/panneau-heliotrope.jpg",
-            "caption": "Photovoltaïque suiveur"
+            "image": "img/archi/tour-eiffel.jpg",
+            "caption": "Structure métallique légère et solide"
           },
-          "hint": "Capter mieux la lumière en suivant le soleil pendant la journée.",
+          "hint": "La matière là où la résistance est demandée, et nulle part ailleurs — c'est le secret de la légèreté.",
           "explanation": {
-            "title": "Suivre la lumière",
-            "text": "Le tournesol oriente son capitule vers le soleil pour maximiser sa photosynthèse. Les panneaux photovoltaïques héliotropes (trackers) reprennent ce comportement : montés sur axe orientable, ils suivent la course du soleil et augmentent la production électrique de 25 % à 40 % par rapport à des panneaux fixes — un bâtiment qui se tourne vers la lumière."
+            "title": "L'os qui inspire la Tour Eiffel",
+            "text": "Nos os n'ont de la matière que là où la résistance est demandée : ils sont très légers et non homogènes en densité. L'os humain a ainsi inspiré la Tour Eiffel. Si celle-ci est arrivée à la troisième place du concours de 1886, c'est avant tout parce qu'elle était plus légère que le cylindre d'air qui la contient."
           }
         }
       ]
