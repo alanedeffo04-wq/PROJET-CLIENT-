@@ -82,6 +82,10 @@
     <div class="game">
       <header class="game__header">
         <div class="game__header-left">
+          <button type="button" class="btn-back" id="btn-quit">
+            <span class="btn-back__arrow">←</span>
+            <span class="btn-back__text">Menu principal</span>
+          </button>
           <h2 class="game__phase" id="game-phase">Manche 1 / 4</h2>
         </div>
         <div class="game__header-right">
@@ -101,17 +105,6 @@
           <!-- Les cartes sont injectées par script.js -->
         </div>
       </section>
-
-      <footer class="game__footer">
-        <button type="button" class="btn btn--ghost btn--small" id="btn-quit">
-          Quitter la session
-        </button>
-        <p class="game__legend">
-          <span class="legend-dot legend-dot--bio"></span> Biologie
-          <span class="legend-sep">·</span>
-          <span class="legend-dot legend-dot--archi"></span> Architecture
-        </p>
-      </footer>
     </div>
   </main>
 
@@ -125,6 +118,12 @@
   >
     <span class="hint-toast__icon">✦</span>
     <span class="hint-toast__text" id="hint-toast-text"></span>
+    <button
+      type="button"
+      class="hint-toast__close"
+      id="hint-toast-close"
+      aria-label="Fermer l'indice"
+    >×</button>
   </div>
 
   <!-- ========== MODALE : PAIRE TROUVÉE ========== -->

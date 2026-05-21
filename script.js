@@ -14,7 +14,6 @@
       storageKey: 'stk-biomim-state-v2',
       slotsPerRound: 12,            // grille 4x3
       pairsPerRound: 5,             // 5 paires = 10 cartes + 2 vides
-      hintDuration: 6000,           // ms — entre 5 et 7s comme demandé
       cardRevealStagger: 40,        // ms entre l'apparition de chaque carte
       correctAnimDuration: 650,     // ms — temps avant d'ouvrir la modale
       wrongResetDuration: 900       // ms avant de désélectionner après erreur
@@ -30,8 +29,7 @@
       erroredCards: {},             // { 'r1-p1__bio': 2, ... } — compteur d'erreurs par carte
       layoutByRound: {},            // { 1: [<slotConfig>...], ... }
       selected: [],                 // tableau de 0 à 2 cartes en cours de sélection
-      locked: false,                // bloque les clics pendant l'animation
-      hintTimer: null
+      locked: false                 // bloque les clics pendant l'animation
     };
   
     // -----------------------------------------------------------
@@ -52,6 +50,7 @@
   
       hintToast: null,
       hintToastText: null,
+      hintToastClose: null,
   
       modalPair: null,
       modalPairTitle: null,
@@ -364,6 +363,9 @@
       // Vide la sélection
       state.selected = [];
   
+      // Ferme l'indice s'il est affiché (bonne réponse trouvée)
+      hideHint();
+  
       // Affiche le pop-up pédagogique
       openPairModal(a.pairId);
     };
@@ -407,29 +409,26 @@
   
     // -----------------------------------------------------------
     // INDICES
+    // L'indice reste affiché jusqu'à ce que :
+    // 1. Le joueur trouve une bonne réponse (fermeture auto)
+    // 2. Le joueur clique sur la croix × (fermeture manuelle)
     // -----------------------------------------------------------
     const showHint = (pairId) => {
       const pair = findPair(state.currentRound, pairId);
       if (!pair || !pair.hint) return;
-  
-      if (state.hintTimer) {
-        clearTimeout(state.hintTimer);
-        state.hintTimer = null;
-      }
   
       els.hintToastText.textContent = pair.hint;
       els.hintToast.hidden = false;
       // Force un reflow pour que la transition CSS prenne effet
       void els.hintToast.offsetWidth;
       els.hintToast.classList.add('is-visible');
+    };
   
-      state.hintTimer = setTimeout(() => {
-        els.hintToast.classList.remove('is-visible');
-        // Cacher après la transition de fade-out (450ms côté CSS)
-        setTimeout(() => {
-          els.hintToast.hidden = true;
-        }, 460);
-      }, CONFIG.hintDuration);
+    const hideHint = () => {
+      els.hintToast.classList.remove('is-visible');
+      setTimeout(() => {
+        els.hintToast.hidden = true;
+      }, 460);
     };
   
     // -----------------------------------------------------------
@@ -639,6 +638,7 @@
   
       els.hintToast = $('#hint-toast');
       els.hintToastText = $('#hint-toast-text');
+      els.hintToastClose = $('#hint-toast-close');
   
       els.modalPair = $('#modal-pair');
       els.modalPairTitle = $('#modal-pair-title');
@@ -662,6 +662,7 @@
   
       els.btnStart.addEventListener('click', startGame);
       els.btnQuit.addEventListener('click', onQuit);
+      els.hintToastClose.addEventListener('click', hideHint);
       els.modalPairContinue.addEventListener('click', onPairModalContinue);
       els.modalRoundContinue.addEventListener('click', onRoundModalContinue);
       els.modalEndRestart.addEventListener('click', onEndRestart);
