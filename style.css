@@ -434,7 +434,37 @@ p {
    ------------------------------------------------------------- */
 .view--game {
   padding: var(--space-5) var(--space-4) var(--space-7);
+  position: relative;
+  isolation: isolate;
+  --bg-opacity: 1;
+  --overlay-opacity: 1;
 }
+
+/* Background de manche — dévoilé progressivement via --bg-opacity */
+.view--game::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--round-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: var(--bg-opacity);
+  transition: opacity 900ms var(--ease-out-quint);
+  pointer-events: none;
+}
+
+/* Overlay sable fixe — assure la lisibilité des cartes en permanence */
+.view--game.has-round-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(242, 237, 229, var(--overlay-opacity, 1));
+  transition: background 900ms var(--ease-out-quint);
+  pointer-events: none;
+}
+
 
 .game {
   max-width: var(--container-max);

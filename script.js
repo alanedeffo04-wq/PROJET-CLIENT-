@@ -198,8 +198,20 @@
     els.total.textContent = CONFIG.pairsPerRound;
     els.found.textContent = found.length;
 
+    // Background de manche
+    if (roundData.background) {
+      els.viewGame.style.setProperty('--round-bg', `url('${roundData.background}')`);
+      els.viewGame.classList.add('has-round-bg');
+    } else {
+      els.viewGame.style.removeProperty('--round-bg');
+      els.viewGame.classList.remove('has-round-bg');
+    }
+
     // Vidage
     els.board.innerHTML = '';
+
+    // Opacité du background selon les paires déjà trouvées (reprise de session)
+    revealBackground(found.length, CONFIG.pairsPerRound);
 
     layout.forEach((slot, i) => {
       let cardEl;
@@ -289,6 +301,16 @@
   };
 
   // -----------------------------------------------------------
+  // DÉVOILEMENT PROGRESSIF DU BACKGROUND
+  // -----------------------------------------------------------
+  const revealBackground = (found, total) => {
+    // L'overlay part opaque (1) et perd 20% d'opacité à chaque bonne paire
+    const overlayOpacity = 1 - (found / total);
+    els.viewGame.style.setProperty('--bg-opacity', 1);
+    els.viewGame.style.setProperty('--overlay-opacity', overlayOpacity);
+  };
+
+  // -----------------------------------------------------------
   // ÉVALUATION DE LA SÉLECTION
   // -----------------------------------------------------------
   const evaluateSelection = async () => {
@@ -334,6 +356,9 @@
     }
     els.found.textContent = state.foundByRound[round].length;
     saveState();
+
+    // Dévoile progressivement le background selon les paires trouvées
+    revealBackground(state.foundByRound[round].length, CONFIG.pairsPerRound);
 
     // Vide la sélection
     state.selected = [];

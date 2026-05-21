@@ -4,6 +4,7 @@
       "round": 1,
       "title": "Fondations & Structures porteuses",
       "subtitle": "Comment le vivant tient debout",
+      "background": "img/round1.jpeg",
       "pairs": [
         {
           "id": "r1-p1",
@@ -111,6 +112,7 @@
       "round": 2,
       "title": "Enveloppes & Peaux",
       "subtitle": "Quand la façade devient peau",
+      "background": "img/round2.jpeg",
       "pairs": [
         {
           "id": "r2-p1",
@@ -218,6 +220,7 @@
       "round": 3,
       "title": "Régulation & Flux",
       "subtitle": "Faire circuler l'air, l'eau et les forces",
+      "background": "img/round3.jpeg",
       "pairs": [
         {
           "id": "r3-p1",
@@ -325,6 +328,7 @@
       "round": 4,
       "title": "Matière vivante & Intelligence adaptative",
       "subtitle": "Quand le bâtiment devient organisme",
+      "background": "img/round4.jpeg",
       "pairs": [
         {
           "id": "r4-p1",
