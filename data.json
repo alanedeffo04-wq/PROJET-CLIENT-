@@ -11,13 +11,13 @@
           "bio": {
             "name": "Le martin-pêcheur",
             "label": "Biologie",
-            "image": "img/bio/martin-pecheur.jpg",
+            "image": "img/Cartes/Frame 30.jpg",
             "caption": "Bec fuselé du martin-pêcheur"
           },
           "archi": {
             "name": "Le TGV Japonais",
             "label": "Technologie",
-            "image": "img/archi/tgv-japonais.jpg",
+            "image": "img/Cartes/Frame 31.jpg",
             "caption": "Nez profilé du Shinkansen"
           },
           "hint": "Pense à la forme du bec et au passage d'un milieu à l'autre sans bruit.",
@@ -31,13 +31,13 @@
           "bio": {
             "name": "Le gecko",
             "label": "Biologie",
-            "image": "img/bio/gecko.jpg",
+            "image": "img/Cartes/Frame 32.jpg",
             "caption": "Pattes adhésives du gecko"
           },
           "archi": {
             "name": "La Geckskin",
             "label": "Technologie",
-            "image": "img/archi/geckskin.jpg",
+            "image": "img/Cartes/Frame 33.jpg",
             "caption": "Adhésif puissant et réversible"
           },
           "hint": "Un animal qui marche au plafond… et une colle qui tient une télévision.",
@@ -51,13 +51,13 @@
           "bio": {
             "name": "La termitière",
             "label": "Biologie",
-            "image": "img/bio/termitiere.jpg",
+            "image": "img/Cartes/Frame 34.jpg",
             "caption": "Cheminées de ventilation naturelle"
           },
           "archi": {
             "name": "L'Eastgate Building",
             "label": "Architecture",
-            "image": "img/archi/eastgate-building.jpg",
+            "image": "img/Cartes/Frame 35.jpg",
             "caption": "Centre commercial à Harare, Zimbabwe"
           },
           "hint": "Un bâtiment qui consomme 90 % d'énergie de moins grâce à une régulation passive de température.",
@@ -71,13 +71,13 @@
           "bio": {
             "name": "La trompe du moustique",
             "label": "Biologie",
-            "image": "img/bio/moustique.jpg",
+            "image": "img/Cartes/Frame 36.jpg",
             "caption": "Trompe fine et conique du moustique"
           },
           "archi": {
             "name": "L'aiguille médicale indolore",
             "label": "Technologie",
-            "image": "img/archi/aiguille-medicale.jpg",
+            "image": "img/Cartes/Frame 37.jpg",
             "caption": "Aiguille conique ultra-fine"
           },
           "hint": "Une piqûre désagréable mais indolore… dont la forme inspire la médecine moderne.",
@@ -91,13 +91,13 @@
           "bio": {
             "name": "Les fruits de bardane",
             "label": "Biologie",
-            "image": "img/bio/bardane.jpg",
+            "image": "img/Cartes/Frame 38.jpg",
             "caption": "Crochets végétaux accrocheurs"
           },
           "archi": {
             "name": "Le Velcro",
             "label": "Technologie",
-            "image": "img/archi/velcro.jpg",
+            "image": "img/Cartes/Frame 39.jpg",
             "caption": "Système scratch velours/crochets"
           },
           "hint": "Une fixation sans colle, inspirée d'une plante qui s'accroche aux poils des animaux.",
@@ -119,13 +119,13 @@
           "bio": {
             "name": "Le nautile",
             "label": "Biologie",
-            "image": "img/bio/nautile.jpg",
+            "image": "img/Cartes/Frame 40.jpg",
             "caption": "Coquille spiralée du nautile"
           },
           "archi": {
             "name": "Les turboréacteurs",
             "label": "Technologie",
-            "image": "img/archi/turboreacteur.jpg",
+            "image": "img/Cartes/Frame 41.jpg",
             "caption": "Moteur à réaction spiralé"
           },
           "hint": "Une coquille en spirale qui propulse silencieusement… comme un réacteur.",
@@ -139,13 +139,13 @@
           "bio": {
             "name": "Les nageoires de baleines à bosse",
             "label": "Biologie",
-            "image": "img/bio/nageoire-baleine.jpg",
+            "image": "img/Cartes/Frame 42.jpg",
             "caption": "Bord d'attaque en tubercules"
           },
           "archi": {
             "name": "Les éoliennes",
             "label": "Technologie",
-            "image": "img/archi/pale-eolienne.jpg",
+            "image": "img/Cartes/Frame 43.jpg",
             "caption": "Pale à bord d'attaque ondulé"
           },
           "hint": "Un bord d'attaque bosselé qui glisse mieux dans le fluide qu'un bord lisse.",
@@ -159,13 +159,13 @@
           "bio": {
             "name": "Les lucioles",
             "label": "Biologie",
-            "image": "img/bio/luciole.jpg",
+            "image": "img/Cartes/Frame 44.jpg",
             "caption": "Abdomen lumineux à écailles dentées"
           },
           "archi": {
             "name": "Les lampes LED",
             "label": "Technologie",
-            "image": "img/archi/lampe-led.jpg",
+            "image": "img/Cartes/Frame 45.jpg",
             "caption": "LED à rendement lumineux optimisé"
           },
           "hint": "L'abdomen couvert d'écailles en dents de scie qui aide l'insecte à briller plus fort.",
@@ -179,13 +179,13 @@
           "bio": {
             "name": "Le papillon Greta oto",
             "label": "Biologie",
-            "image": "img/bio/papillon-greta-oto.jpg",
+            "image": "img/Cartes/Frame 59.jpg",
             "caption": "Ailes transparentes anti-reflet"
           },
           "archi": {
             "name": "Les verres anti-reflet",
             "label": "Technologie",
-            "image": "img/archi/verres-anti-reflet.jpg",
+            "image": "img/Cartes/Frame 60.jpg",
             "caption": "Matériau transparent non réfléchissant"
           },
           "hint": "Des ailes transparentes qui ne réfléchissent pas la lumière — un secret pour les optiques.",
@@ -199,13 +199,13 @@
           "bio": {
             "name": "La peau du requin",
             "label": "Biologie",
-            "image": "img/bio/peau-requin.jpg",
+            "image": "img/Cartes/Frame 61.jpg",
             "caption": "Denticules microscopiques alignés"
           },
           "archi": {
             "name": "Les combinaisons de natation",
             "label": "Technologie",
-            "image": "img/archi/combinaison-natation.jpg",
+            "image": "img/Cartes/Frame 62.jpg",
             "caption": "Surface ultra-rapide calquée sur le requin"
           },
           "hint": "Une surface qui paraît lisse mais ne l'est pas — et qui glisse mieux pour cette raison.",
@@ -227,13 +227,13 @@
           "bio": {
             "name": "L'aile du papillon morpho",
             "label": "Biologie",
-            "image": "img/bio/papillon-morpho.jpg",
+            "image": "img/Cartes/Frame 63.jpg",
             "caption": "Écailles thermorégulatrices en chitine"
           },
           "archi": {
             "name": "Les panneaux solaires",
             "label": "Technologie",
-            "image": "img/archi/panneaux-solaires.jpg",
+            "image": "img/Cartes/Frame 64.jpg",
             "caption": "Photovoltaïque à régulation thermique"
           },
           "hint": "Des écailles qui régulent la température selon la chaleur ambiante — comme un panneau qui ne surchauffe pas.",
@@ -247,13 +247,13 @@
           "bio": {
             "name": "La cicatrisation de la peau",
             "label": "Biologie",
-            "image": "img/bio/cicatrice.jpg",
+            "image": "img/Cartes/Frame 65.jpg",
             "caption": "Auto-réparation des tissus cutanés"
           },
           "archi": {
             "name": "Le béton autocicatrisant",
             "label": "Architecture",
-            "image": "img/archi/beton-autocicatrisant.jpg",
+            "image": "img/Cartes/Frame 66.jpg",
             "caption": "Béton à bactéries encapsulées"
           },
           "hint": "Quand une fissure apparaît, un mécanisme interne se réveille pour colmater la brèche.",
@@ -267,13 +267,13 @@
           "bio": {
             "name": "Le coléoptère de Namibie",
             "label": "Biologie",
-            "image": "img/bio/coleoptere-namibie.jpg",
+            "image": "img/Cartes/Frame 67.jpg",
             "caption": "Dos hydrophile pour collecter le brouillard"
           },
           "archi": {
             "name": "Les filets capteurs de rosée",
             "label": "Technologie",
-            "image": "img/archi/filets-rosee.jpg",
+            "image": "img/Cartes/Frame 68.jpg",
             "caption": "Filets à surface hydrophile/hydrofuge"
           },
           "hint": "Collecter l'eau du brouillard dans un désert grâce à une surface à double texture.",
@@ -287,13 +287,13 @@
           "bio": {
             "name": "Le corail",
             "label": "Biologie",
-            "image": "img/bio/corail.jpg",
+            "image": "img/Cartes/Frame 69.jpg",
             "caption": "Polypes sécrétant du carbonate de calcium"
           },
           "archi": {
             "name": "Le ciment neutre en carbone",
             "label": "Architecture",
-            "image": "img/archi/ciment-carbone.jpg",
+            "image": "img/Cartes/Frame 70.jpg",
             "caption": "Liant minéral qui séquestre le CO₂"
           },
           "hint": "Un organisme vivant qui construit sa structure dure en captant le CO₂ de l'eau.",
@@ -307,13 +307,13 @@
           "bio": {
             "name": "La corbeille de Vénus",
             "label": "Biologie",
-            "image": "img/bio/corbeille-venus.jpg",
+            "image": "img/Cartes/Frame 71.jpg",
             "caption": "Éponge à squelette de fibres de verre"
           },
           "archi": {
             "name": "Le 30 St Mary Axe",
             "label": "Architecture",
-            "image": "img/archi/30-st-mary-axe.jpg",
+            "image": "img/Cartes/Frame 72.jpg",
             "caption": "The Gherkin, Londres"
           },
           "hint": "Un gratte-ciel londonien dont la structure spiralée rappelle le squelette de cette éponge marine.",
@@ -335,13 +335,13 @@
           "bio": {
             "name": "L'effet lotus",
             "label": "Biologie",
-            "image": "img/bio/lotus.jpg",
+            "image": "img/Cartes/Frame 73.jpg",
             "caption": "Bosses microscopiques superhydrophobes"
           },
           "archi": {
             "name": "La surface hydrophobe",
             "label": "Architecture",
-            "image": "img/archi/revetement-autonettoyant.jpg",
+            "image": "img/Cartes/Frame 74.jpg",
             "caption": "Peinture nanostructurée autonettoyante"
           },
           "hint": "Une surface sur laquelle l'eau ne se pose jamais — et emporte la poussière en partant.",
@@ -355,13 +355,13 @@
           "bio": {
             "name": "Le manchot",
             "label": "Biologie",
-            "image": "img/bio/manchot.jpg",
+            "image": "img/Cartes/Frame 87.jpg",
             "caption": "Regroupement thermique sur la banquise"
           },
           "archi": {
             "name": "Le District 11",
             "label": "Architecture",
-            "image": "img/archi/district-11.jpg",
+            "image": "img/Cartes/Frame 88.jpg",
             "caption": "Centre d'innovation Skolkovo, Russie"
           },
           "hint": "Des villas regroupées en tortue pour économiser 5°C — comme des manchots serrés dans le froid.",
@@ -375,13 +375,13 @@
           "bio": {
             "name": "La moule",
             "label": "Biologie",
-            "image": "img/bio/moule.jpg",
+            "image": "img/Cartes/Frame 89.jpg",
             "caption": "Fixation tenace sur rochers et métaux"
           },
           "archi": {
             "name": "La colle forte",
             "label": "Technologie",
-            "image": "img/archi/colle-forte.jpg",
+            "image": "img/Cartes/Frame 90.jpg",
             "caption": "Adhésif bio-inspiré pour métaux"
           },
           "hint": "Un mollusque qui adhère aux rochers et même aux métaux — une colle incroyable.",
@@ -395,13 +395,13 @@
           "bio": {
             "name": "Le zèbre",
             "label": "Biologie",
-            "image": "img/bio/zebre.jpg",
+            "image": "img/Cartes/Frame 91.jpg",
             "caption": "Rayures noires et blanches thermorégulatrices"
           },
           "archi": {
             "name": "Le camouflage",
             "label": "Architecture",
-            "image": "img/archi/camouflage.jpg",
+            "image": "img/Cartes/Frame 92.jpg",
             "caption": "Enveloppe à motif contrasté"
           },
           "hint": "Un motif contrasté qui trompe l'œil et régule la température — sur un animal comme sur un bâtiment.",
@@ -415,13 +415,13 @@
           "bio": {
             "name": "L'os humain",
             "label": "Biologie",
-            "image": "img/bio/os-humain.jpg",
+            "image": "img/Cartes/Frame 93.jpg",
             "caption": "Structure trabéculaire légère et résistante"
           },
           "archi": {
             "name": "La Tour Eiffel",
             "label": "Architecture",
-            "image": "img/archi/tour-eiffel.jpg",
+            "image": "img/Cartes/Frame 94.jpg",
             "caption": "Structure métallique légère et solide"
           },
           "hint": "La matière là où la résistance est demandée, et nulle part ailleurs — c'est le secret de la légèreté.",

@@ -698,6 +698,33 @@
       }
   
       updateStartButtonLabel();
+      
+      // Gestion de la vidéo d'arrière-plan
+      initLandingVideo();
+    };
+  
+    // -----------------------------------------------------------
+    // VIDÉO D'ARRIÈRE-PLAN — Boucle après 15 secondes
+    // -----------------------------------------------------------
+    const initLandingVideo = () => {
+      const video = document.getElementById('landing-video');
+      if (!video) return;
+      
+      let hasLooped = false;
+      
+      video.addEventListener('timeupdate', () => {
+        // Après 15 secondes, retour au début
+        if (!hasLooped && video.currentTime >= 15) {
+          video.currentTime = 0;
+          hasLooped = true;
+        }
+      });
+      
+      // Quand la vidéo se termine naturellement, la relancer
+      video.addEventListener('ended', () => {
+        video.currentTime = 0;
+        video.play();
+      });
     };
   
     // -----------------------------------------------------------

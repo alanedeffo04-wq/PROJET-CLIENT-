@@ -322,6 +322,25 @@
    
    .view--landing {
      padding: var(--space-7) var(--space-5) var(--space-9);
+     position: relative;
+     overflow: hidden;
+   }
+   
+   /* Vidéo d'arrière-plan */
+   .landing__video {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     transform: translate(-50%, -50%);
+     z-index: 0;
+     opacity: 0.2;
+     filter: blur(1px);
+     object-fit: cover;
+     pointer-events: none;
    }
    
    .landing {
@@ -331,6 +350,8 @@
      grid-template-columns: 1fr;
      gap: var(--space-7);
      align-items: center;
+     position: relative;
+     z-index: 1;
    }
    
    @media (min-width: 880px) {
